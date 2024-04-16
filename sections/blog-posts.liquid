@@ -1,6 +1,7 @@
 {{ section.settings.liquid-range }}
 <h1>Blog</h1>
 {% assign blog = section.settings.new-blog %}
+{{ blog.articles_count }}
 {% unless blog.articles_count ==  1 %}
   there is atleast 1 blog post
 {% endunless%}
