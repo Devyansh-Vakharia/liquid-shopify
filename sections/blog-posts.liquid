@@ -1,5 +1,6 @@
 {{ section.settings.liquid-range }}
 <h1>Blog</h1>
+{% assign blog = section.settings.new-blog %}
 {% unless blog.articles_count ==  1 %}
   there is atleast 1 blog post
 {% endunless%}
@@ -15,6 +16,12 @@
       "max": 12,
       "step": 3,
       "default": 3
+    },
+    {
+      "id": "new-blog",
+      "type": "blog",
+      "label": "Blog"
+      
     }
   ],
   "presets": [
