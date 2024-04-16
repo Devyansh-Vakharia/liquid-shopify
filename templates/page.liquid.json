@@ -55,7 +55,8 @@
       "type": "liquid-ref",
       "settings": {
         "liquid-ref": "this is a reference",
-        "Liquid-checkbox": false
+        "Liquid-checkbox": false,
+        "Liquid-radio": "option-2"
       }
     }
   },
