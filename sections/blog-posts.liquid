@@ -4,6 +4,7 @@
 
 {% unless blog.articles_count ==  0 %}
   {% for article in blog.articles limit : section.settings.liquid-range %}
+    <div class = "grid__item medium-up--one--third">
     <a href="{{ article.url }}">
       <img src="{{ article.image | img_url: '500x' }}" />
     </a>
@@ -11,7 +12,7 @@
     <a href="{{ article.url }}">
       {{ article.title }}
     </a>
-    <br/>
+    </div>
     {% endfor %}
 {% endunless%}
 {% schema %}
