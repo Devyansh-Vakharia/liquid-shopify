@@ -51,16 +51,16 @@
         "padding_bottom": 52
       }
     },
-    "liquid_ref_6MhcFz": {
+    "liquid_ref_KwhQET": {
       "type": "liquid-ref",
       "settings": {
-        "liquid-ref": ""
+        "liquid-ref": "this is a reference"
       }
     }
   },
   "order": [
     "main",
     "rich_text_Ng9EL3",
-    "liquid_ref_6MhcFz"
+    "liquid_ref_KwhQET"
   ]
 }
