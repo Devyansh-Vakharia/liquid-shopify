@@ -174,17 +174,17 @@
         "column2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "<strong>Effortless Chic<\/strong>",
+            "text": "<p>They are dressed in the epitome of street style: a sleek black leather jacket layered over a comfortable yet chic graphic tee.<\/p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column3": {
+        "column_F3Bt4H": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "<strong>Classics Collection<\/strong>",
+            "text": "<p> The centerpiece is a sumptuous camel-colored cashmere coat, exuding understated luxury and timeless elegance.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -193,7 +193,7 @@
       "block_order": [
         "column1",
         "column2",
-        "column3"
+        "column_F3Bt4H"
       ],
       "settings": {
         "title": "",
