@@ -5,6 +5,12 @@
 {% else %}
   Checkbox not checked
 {% endif %}
+
+{% if section.settings.Liquid-radio == 'option-1' %}
+  option 1 is selected
+{% else %}
+  option 2 is selected
+{% endif %}
 {% schema %}
   {
     "name": "Liquid Reference",
@@ -18,6 +24,21 @@
         "id": "Liquid-checkbox",
         "type": "checkbox",
         "label": "A checbox for testing"
+      },
+      {
+        "id": "Liquid-radio",
+        "type": "radio",
+        "label": "A radio for testing",
+        "options": [
+          {
+            "value": "option-1",
+            "label": "option 1"   
+          },
+          {
+            "value": "option-2",
+            "label": "option 2"
+          }
+        ]
       }
     ],
     

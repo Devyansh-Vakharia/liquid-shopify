@@ -55,7 +55,7 @@
       "type": "liquid-ref",
       "settings": {
         "liquid-ref": "this is a reference",
-        "Liquid-checkbox": true
+        "Liquid-checkbox": false
       }
     }
   },
