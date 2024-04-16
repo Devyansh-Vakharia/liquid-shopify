@@ -1,4 +1,8 @@
 {{ section.settings.liquid-range }}
+
+{% unless blog.articles_count ==  1 %}
+  there is atleast 1 blog post
+{% endunless%}
 {% schema %}
 {
   "name": "New Blog Posts",
