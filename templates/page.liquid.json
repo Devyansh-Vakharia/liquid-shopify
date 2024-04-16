@@ -53,10 +53,11 @@
     },
     "liquid_ref_KwhQET": {
       "type": "liquid-ref",
+      "disabled": true,
       "settings": {
         "liquid-ref": "this is a reference",
         "Liquid-checkbox": false,
-        "Liquid-radio": "option-2"
+        "Liquid-radio": "option-1"
       }
     }
   },
