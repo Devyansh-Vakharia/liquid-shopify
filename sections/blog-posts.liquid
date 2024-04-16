@@ -1,4 +1,4 @@
-
+{{ section.settings.liquid-range }}
 
 {% assign blog = section.settings.new-blog %}
 
@@ -6,14 +6,14 @@
   {% for article in blog.articles limit : section.settings.liquid-range %}
     <div class = "grid__item medium-up--one-third">
     <a href="{{ article.url }}">
-      <img src="{{ article.image | img_url: '50x' }}" />
+      <img src="{{ article.image | img_url: '500x' }}" />
     </a>
     <br/>
     <a href="{{ article.url }}">
       {{ article.title }}
     </a>
     </div>
-    {% endfor %}
+  {% endfor %}
 {% endunless%}
 {% schema %}
 {
