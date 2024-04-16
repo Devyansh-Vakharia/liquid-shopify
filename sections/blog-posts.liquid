@@ -3,7 +3,7 @@
 {% assign blog = section.settings.new-blog %}
 
 {% unless blog.articles_count ==  0 %}
-  {% for article in blog.articles %}
+  {% for article in blog.articles limit : section.settings.liquid-range %}
     <a href="{{ article.url }}">
       <img src="{{ article.image | img_url: '500x' }}" />
     </a>
