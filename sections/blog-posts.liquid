@@ -1,13 +1,3 @@
-{{ section.settings.liquid-range }}
-
-{% assign blog = section.settings.new-blog %}
-
-{% unless blog.articles_count ==  0 %}
-  {% for article in blog.articles %}
-    <img src="{{ article.image | img_url }}"/>
-    {{ article.title }}
-    {% endfor %}
-{% endunless%}
 {% schema %}
 {
   "name": "New Blog Posts",
@@ -15,7 +5,7 @@
     {
       "id": "liquid-range",
       "type": "range",
-      "label": "Range",
+      "label": "Number of Posts",
       "min": 3,
       "max": 12,
       "step": 3,
@@ -24,15 +14,27 @@
     {
       "id": "new-blog",
       "type": "blog",
-      "label": "Blog"
-      
+      "label": "Select Blog"
     }
   ],
   "presets": [
     {
       "name": "New Blog Posts",
-      "category": "Posts"
+      "category": "Blog Posts"
     }
   ]
 }
 {% endschema %}
+
+{% assign blog = section.settings['new-blog'] %}
+
+{% unless blog.articles.size == 0 %}
+  {% assign post_count = 0 %}
+  {% for article in blog.articles %}
+    {% if post_count < section.settings['liquid-range'] %}
+      <img src="{{ article.image | img_url }}"/>
+      {{ article.title }}
+      {% assign post_count = post_count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+{% endunless %}
