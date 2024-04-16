@@ -3,7 +3,8 @@
 {% assign blog = section.settings.new-blog %}
 
 {% unless blog.articles_count ==  0 %}
-  
+  <div class="page-width">
+    <div class="grid grid --uniform grid --blog">
     {% for article in blog.articles limit: section.settings.liquid-range %}
       <div class="grid__item medium-up--one-third">
         <a href="{{ article.url }}">
@@ -11,9 +12,12 @@
         </a>
         <br/>
         <a href="{{ article.url }}">{{ article.title }}</a>
+        <br/>
+        <br/>
       </div>
     {% endfor %}
-  
+    </div>
+  </div>
 {% endunless %}
 {% schema %}
 {
