@@ -16,6 +16,7 @@
       "block_order": [
         "announcement-bar-0"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
@@ -46,6 +47,7 @@
     },
     "custom_liquid_f33emD": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "{{ page.title }}",
         "color_scheme": "",
