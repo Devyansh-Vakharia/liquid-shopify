@@ -63,7 +63,7 @@
     "blog_posts_rw7TEQ": {
       "type": "blog-posts",
       "settings": {
-        "liquid-range": 9
+        "liquid-range": 3
       }
     }
   },
