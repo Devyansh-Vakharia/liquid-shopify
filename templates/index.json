@@ -112,20 +112,20 @@
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": "summer-collection-1"
+            "collection": "summer-collection"
           }
         },
         "product": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "shirt",
             "second_image": false
           }
         },
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "summer-collection-2"
           }
         }
       },
