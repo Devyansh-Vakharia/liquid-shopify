@@ -1,20 +1,19 @@
+{% assign blog = section.settings['new-blog'] %}
 
-
-{% assign blog = section.settings.new-blog %}
-
-{% unless blog.articles_count ==  0 %}
-  {% for article in blog.articles limit : section.settings.liquid-range %}
-    <div class = "grid__item medium-up--one-third">
-    <a href="{{ article.url }}">
-      <img src="{{ article.image | img_url: '50x' }}" />
-    </a>
-    <br/>
-    <a href="{{ article.url }}">
-      {{ article.title }}
-    </a>
+{% if blog.articles.size > 0 %}
+  {% for article in blog.articles limit: section.settings['liquid-range'] %}
+    <div class="grid__item medium-up--one-third">
+      <a href="{{ article.url }}">
+        <img src="{{ article.image.src | img_url: '50x' }}" />
+      </a>
+      <br/>
+      <a href="{{ article.url }}">
+        {{ article.title }}
+      </a>
     </div>
-    {% endfor %}
-{% endunless%}
+  {% endfor %}
+{% endif %}
+
 {% schema %}
 {
   "name": "New Blog Posts",
@@ -32,7 +31,6 @@
       "id": "new-blog",
       "type": "blog",
       "label": "Blog"
-      
     }
   ],
   "presets": [
