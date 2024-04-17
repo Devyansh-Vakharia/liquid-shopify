@@ -2,27 +2,26 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
+    "announcement_bar_UmBT6Y": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement-bar-0": {
+        "announcement_XM7yE6": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Free shipping with all orders",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement_XM7yE6"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": false,
-        "change_slides_speed": 5,
+        "change_slides_speed": 3,
         "enable_country_selector": false,
         "enable_language_selector": false
       }
@@ -47,7 +46,7 @@
     }
   },
   "order": [
-    "announcement-bar",
+    "announcement_bar_UmBT6Y",
     "header"
   ]
 }
