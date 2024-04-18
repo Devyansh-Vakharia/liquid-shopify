@@ -4,76 +4,38 @@
   <style>
     .blog-image {
       border-radius: 15px; /* Adjust the value as needed */
+      height: 350px;
+      width: auto;
+      margin-right: 20px;
+      display: inline-block;
     }
     .slideshow-container {
-      position: relative;
-      max-width: 350px;
-      margin: auto;
-    }
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-    .active {
-      background-color: #717171;
+      overflow: hidden;
+      white-space: nowrap;
     }
   </style>
   <div class="slideshow-container">
     {% for article in blog.articles limit: section.settings.liquid-range %}
-      <div class="mySlides">
-        <a href="{{ article.url }}">
-          <img src="{{ article.image | img_url: "300" }}" class="blog-image" style="height: 350px; width: 350px; margin-bottom: 20px;" />
-        </a>
-        <br/>
-        <a href="{{ article.url }}">{{ article.title }}</a>
-        <br/>
-        <br/>
-      </div>
-    {% endfor %}
-    <!-- Navigation arrows -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-  <!-- Dots -->
-  <div style="text-align:center">
-    {% for article in blog.articles limit: section.settings.liquid-range %}
-      <span class="dot" onclick="currentSlide({{ forloop.index }})"></span>
+      <a href="{{ article.url }}">
+        <img src="{{ article.image | img_url: "300" }}" class="blog-image" />
+      </a>
     {% endfor %}
   </div>
 
   <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
+    var slideIndex = 0;
+    carousel();
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
+    function carousel() {
       var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
+      var slides = document.getElementsByClassName("blog-image");
       for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
+        slides[i].style.display = "none";
       }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "inline-block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
     }
   </script>
 {% endunless %}
