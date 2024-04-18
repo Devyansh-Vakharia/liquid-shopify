@@ -90,6 +90,48 @@
         "new-blog": "news"
       }
     },
+    "rich_text_hRxqYP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nnJ6q9": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Not sure where to start?<\/strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_jxp9VN": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Take the quiz below to find which products are right for you.<\/h2>"
+          }
+        },
+        "button_APdVg6": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nnJ6q9",
+        "text_jxp9VN",
+        "button_APdVg6"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -229,6 +271,7 @@
     "image_banner",
     "rich_text_Y7wfFU",
     "blog_posts_3Lk3tr",
+    "rich_text_hRxqYP",
     "featured_collection",
     "collage",
     "video",
