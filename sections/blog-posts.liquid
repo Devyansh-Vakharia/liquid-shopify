@@ -2,38 +2,19 @@
 
 {% unless blog.articles_count ==  0 %}
   <style>
-    .blog-image-container {
-      position: relative;
-      display: inline-block;
-    }
     .blog-image {
       border-radius: 15px; /* Adjust the value as needed */
-      display: block;
-    }
-    .image-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      padding: 10px;
-      box-sizing: border-box;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
     }
   </style>
   <div class="page-width">
     <div class="grid grid--uniform grid--blog">
     {% for article in blog.articles limit: section.settings.liquid-range %}
       <div class="grid__item medium-up--one-third">
-        <div class="blog-image-container">
-          <a href="{{ article.url }}">
-            <img src="{{ article.image | img_url: "300" }}" class="blog-image" style="height: 350px; width: 350px; margin-bottom: 20px;" />
-          </a>
-          <div class="image-caption">
-            <a href="{{ article.url }}">{{ article.title }}</a>
-          </div>
-        </div>
+        <a href="{{ article.url }}">
+          <img src="{{ article.image | img_url: "300" }}" class="blog-image" style="height: 350px; width: 350px; margin-bottom: 20px;" />
+        </a>
+        <br/>
+        <a href="{{ article.url }}">{{ article.title }}</a>
         <br/>
         <br/>
       </div>
