@@ -2,6 +2,11 @@
 
 {% unless blog.articles_count == 0 %}
   <style>
+    .blog-images {
+      white-space: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    }
     .blog-image {
       border-radius: 15px; /* Adjust the value as needed */
       height: 350px;
@@ -9,12 +14,8 @@
       margin-right: 20px;
       display: inline-block;
     }
-    .slideshow-container {
-      overflow: hidden;
-      white-space: nowrap;
-    }
   </style>
-  <div class="slideshow-container">
+  <div class="blog-images">
     {% for article in blog.articles limit: section.settings.liquid-range %}
       <a href="{{ article.url }}">
         <img src="{{ article.image | img_url: "300" }}" class="blog-image" />
@@ -24,19 +25,23 @@
 
   <script>
     var slideIndex = 0;
-    carousel();
+    var images = document.querySelectorAll('.blog-image');
 
     function carousel() {
-      var i;
-      var slides = document.getElementsByClassName("blog-image");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
       slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      slides[slideIndex - 1].style.display = "inline-block";
-      setTimeout(carousel, 2000); // Change image every 2 seconds
+      if (slideIndex >= images.length) { slideIndex = 0; }
+      scrollToImage();
     }
+
+    function scrollToImage() {
+      var scrollX = images[slideIndex].offsetLeft;
+      document.querySelector('.blog-images').scrollTo({
+        left: scrollX,
+        behavior: 'smooth'
+      });
+    }
+
+    setInterval(carousel, 2000); // Change image every 2 seconds
   </script>
 {% endunless %}
 
