@@ -40,6 +40,25 @@
       text-decoration: none;
       font-weight: bold;
     }
+    .blog-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+    }
+    .blog-dot {
+      width: 10px;
+      height: 10px;
+      background-color: #bbb;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .blog-dot.active {
+      background-color: #333;
+    }
   </style>
 
   <div class="blog-slideshow">
@@ -55,12 +74,18 @@
         </div>
       {% endfor %}
     </div>
+    <div class="blog-dots">
+      {% for i in (1..blog.articles_count) %}
+        <div class="blog-dot" data-index="{{ i }}"></div>
+      {% endfor %}
+    </div>
   </div>
 
   <script>
     // Slideshow functionality
     var blogSlideshow = document.querySelector('.blog-slideshow');
     var blogImages = document.querySelector('.blog-images');
+    var blogDots = document.querySelectorAll('.blog-dot');
     var imageCount = {{ blog.articles_count }};
     var currentIndex = 0;
     var slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
@@ -69,7 +94,25 @@
       currentIndex = (currentIndex + 1) % imageCount;
       var offset = -currentIndex * 100;
       blogImages.style.transform = 'translateX(' + offset + '%)';
+      updateDots();
     }
+
+    function updateDots() {
+      blogDots.forEach(function(dot, index) {
+        if (index === currentIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    blogDots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        currentIndex = parseInt(dot.getAttribute('data-index')) - 1;
+        nextSlide();
+      });
+    });
 
     blogSlideshow.addEventListener('mouseover', function() {
       clearInterval(slideInterval);
