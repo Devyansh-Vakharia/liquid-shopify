@@ -19,7 +19,7 @@
       <div class="grid grid--uniform grid--blog">
         {% for article in blog.articles limit: section.settings.liquid-range %}
           <div class="grid__item medium-up--one-third">
-            <a href="{{ article.url }}">
+            <a href="{{ article.url }}" class="image-link">
               <img src="{{ article.image | img_url: "300" }}" class="blog-image" />
             </a>
             <br/>
@@ -47,12 +47,25 @@
       slides[slideIndex - 1].style.display = "block";  // Display the current image
       setTimeout(carousel, 2000); // Change image every 2 seconds
     }
+
+    // Add event listeners to handle hover
+    var links = document.querySelectorAll('.image-link');
+    links.forEach(function(link) {
+      link.addEventListener('mouseenter', function(event) {
+        var currentImage = event.currentTarget.querySelector('.blog-image');
+        currentImage.style.display = "block";
+      });
+      link.addEventListener('mouseleave', function(event) {
+        var currentImage = event.currentTarget.querySelector('.blog-image');
+        currentImage.style.display = "none";
+      });
+    });
   </script>
 {% endunless %}
 
 {% schema %}
 {
-  "name": "Image Slidshow",
+  "name": "New Blog Posts",
   "settings": [
     {
       "id": "liquid-range",
@@ -71,7 +84,7 @@
   ],
   "presets": [
     {
-      "name": "Image Slidshow",
+      "name": "New Blog Posts",
       "category": "Posts"
     }
   ]
