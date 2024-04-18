@@ -335,7 +335,15 @@
     "image_slideshow_jdVHid": {
       "type": "image-slideshow",
       "settings": {
-        "image-slideshow": 6
+        "liquid-range": 3,
+        "new-blog": ""
+      }
+    },
+    "image_slideshow_UqjMr8": {
+      "type": "image-slideshow",
+      "settings": {
+        "liquid-range": 3,
+        "new-blog": ""
       }
     }
   },
@@ -349,6 +357,7 @@
     "collage",
     "video",
     "multicolumn",
-    "image_slideshow_jdVHid"
+    "image_slideshow_jdVHid",
+    "image_slideshow_UqjMr8"
   ]
 }
