@@ -1,4 +1,4 @@
-{% assign blog = section.settings.new-blog %}
+{% assign blog = section.settings.image-slidshow %}
 
 {% unless blog.articles_count ==  0 %}
   <style>
@@ -77,24 +77,15 @@
   "name": "Image Slideshow",
   "settings": [
     {
-      "id": "liquid-range",
-      "type": "range",
-      "label": "Range",
-      "min": 3,
-      "max": 12,
-      "step": 3,
-      "default": 3
-    },
-    {
-      "id": "new-blog",
+      "id": "image-slidshow",
       "type": "blog",
-      "label": "Blog"
+      "label": "Slideshow"
       
     }
   ],
   "presets": [
     {
-      "name": "New Blog Posts",
+      "name": "Image Slideshow",
       "category": "Posts"
     }
   ]
