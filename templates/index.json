@@ -83,6 +83,13 @@
         "padding_bottom": 52
       }
     },
+    "blog_posts_3Lk3tr": {
+      "type": "blog-posts",
+      "settings": {
+        "liquid-range": 3,
+        "new-blog": "news"
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -221,6 +228,7 @@
   "order": [
     "image_banner",
     "rich_text_Y7wfFU",
+    "blog_posts_3Lk3tr",
     "featured_collection",
     "collage",
     "video",
