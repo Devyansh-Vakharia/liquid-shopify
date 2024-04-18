@@ -2,12 +2,17 @@
 
 {% unless blog.articles_count == 0 %}
   <style>
+    .blog-slideshow {
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
     .blog-images {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
-      margin: 0 auto;
-      max-width: 1200px;
+      transition: transform 0.5s ease;
     }
     .blog-image {
       position: relative;
@@ -20,9 +25,6 @@
       width: 100%;
       height: auto;
       transition: transform 0.3s ease;
-    }
-    .blog-image:hover {
-      transform: scale(1.05);
     }
     .blog-caption {
       position: absolute;
@@ -39,18 +41,44 @@
       font-weight: bold;
     }
   </style>
-  <div class="blog-images">
-    {% for article in blog.articles limit: section.settings.liquid-range %}
-      <div class="blog-image">
-        <a href="{{ article.url }}">
-          <img src="{{ article.image | img_url: "400x" }}" alt="{{ article.title }}" />
-        </a>
-        <div class="blog-caption">
-          <a href="{{ article.url }}">{{ article.title }}</a>
+
+  <div class="blog-slideshow">
+    <div class="blog-images">
+      {% for article in blog.articles limit: section.settings.liquid-range %}
+        <div class="blog-image">
+          <a href="{{ article.url }}">
+            <img src="{{ article.image | img_url: "400x" }}" alt="{{ article.title }}" />
+          </a>
+          <div class="blog-caption">
+            <a href="{{ article.url }}">{{ article.title }}</a>
+          </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
+
+  <script>
+    // Slideshow functionality
+    var blogSlideshow = document.querySelector('.blog-slideshow');
+    var blogImages = document.querySelector('.blog-images');
+    var imageCount = {{ blog.articles_count }};
+    var currentIndex = 0;
+    var slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % imageCount;
+      var offset = -currentIndex * 100;
+      blogImages.style.transform = 'translateX(' + offset + '%)';
+    }
+
+    blogSlideshow.addEventListener('mouseover', function() {
+      clearInterval(slideInterval);
+    });
+
+    blogSlideshow.addEventListener('mouseleave', function() {
+      slideInterval = setInterval(nextSlide, 5000);
+    });
+  </script>
 {% endunless %}
 
 {% schema %}
@@ -60,7 +88,7 @@
     {
       "id": "liquid-range",
       "type": "range",
-      "label": "Range",
+      "label": "Number of Posts",
       "min": 3,
       "max": 12,
       "step": 3,
@@ -69,13 +97,13 @@
     {
       "id": "new-blog",
       "type": "blog",
-      "label": "Blog"
+      "label": "Select Blog"
     }
   ],
   "presets": [
     {
       "name": "New Blog Posts",
-      "category": "Posts"
+      "category": "Content"
     }
   ]
 }
