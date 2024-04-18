@@ -1,14 +1,12 @@
-{{ section.settings.liquid-range }}
-
 {% assign blog = section.settings.new-blog %}
 
 {% unless blog.articles_count ==  0 %}
   <div class="page-width">
-    <div class="grid grid --uniform grid --blog">
+    <div class="grid grid--uniform grid--blog">
     {% for article in blog.articles limit: section.settings.liquid-range %}
       <div class="grid__item medium-up--one-third">
         <a href="{{ article.url }}">
-          <img src="{{ article.image | img_url: "300" }}" />
+          <img src="{{ article.image | img_url: "300" }}" style="height: 200px; width: auto; margin-bottom: 20px;" />
         </a>
         <br/>
         <a href="{{ article.url }}">{{ article.title }}</a>
@@ -19,6 +17,7 @@
     </div>
   </div>
 {% endunless %}
+
 {% schema %}
 {
   "name": "New Blog Posts",
