@@ -29,7 +29,7 @@
     }
   </style>
   <div class="slideshow-container">
-    {% for article in blog.articles limit: section.settings.liquid-range %}
+    {% for article in blog.articles limit: section.settings.image-slideshow %}
       <img src="{{ article.image | img_url: "300" }}" class="blog-image" />
     {% endfor %}
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -37,7 +37,7 @@
   </div>
   <br>
   <div style="text-align:center">
-    {% for article in blog.articles limit: section.settings.liquid-range %}
+    {% for article in blog.articles limit: section.settings.image-slideshow %}
       <span class="dot" onclick="currentSlide({{ forloop.index }})"></span>
     {% endfor %}
   </div>
