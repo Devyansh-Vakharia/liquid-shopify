@@ -15,25 +15,13 @@
     .blog-image {
       width: 100%;
       overflow: hidden;
+      border-radius: 15px;
+      margin-right: 10px;
     }
     .blog-image img {
       width: 100%;
       height: auto;
       border-radius: 15px;
-    }
-    .blog-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 10px;
-      text-align: center;
-    }
-    .blog-caption a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
     }
     .dot-container {
       position: absolute;
@@ -59,11 +47,8 @@
       {% for article in blog.articles limit: section.settings.liquid-range %}
         <div class="blog-image">
           <a href="{{ article.url }}">
-            <img src="{{ article.image | img_url: "400x" }}" alt="{{ article.title }}" />
+            <img src="{{ article.image | img_url: "150x" }}" alt="{{ article.title }}" />
           </a>
-          <div class="blog-caption">
-            <a href="{{ article.url }}">{{ article.title }}</a>
-          </div>
         </div>
       {% endfor %}
     </div>
