@@ -2,34 +2,42 @@
 
 {% unless blog.articles_count == 0 %}
   <style>
-    .blog-image {
-      border-radius: 15px; /* Adjust the value as needed */
-      height: 350px;
-      width: 350px;
-      margin-bottom: 20px;
-      display: none; /* Hide images by default */
-    }
-    .slideshow-container {
+    .blog-slideshow {
       position: relative;
+      max-width: 100%;
+      margin: auto;
       overflow: hidden;
     }
+    .blog-slideshow img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .blog-slideshow img.active {
+      opacity: 1;
+    }
+    .blog-caption {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 14px;
+    }
   </style>
-  <div class="slideshow-container">
-    <div class="page-width">
-      <div class="grid grid--uniform grid--blog">
-        {% for article in blog.articles limit: section.settings.liquid-range %}
-          <div class="grid__item medium-up--one-third">
-            <a href="{{ article.url }}" class="image-link">
-              <img src="{{ article.image | img_url: "300" }}" class="blog-image" />
-            </a>
-            <br/>
-            <a href="{{ article.url }}">{{ article.title }}</a>
-            <br/>
-            <br/>
-          </div>
-        {% endfor %}
+  <div class="blog-slideshow">
+    {% for article in blog.articles limit: section.settings.liquid-range %}
+      <img src="{{ article.image | img_url: "700x" }}" alt="{{ article.title }}" class="{% if forloop.index == 1 %}active{% endif %}" />
+      <div class="blog-caption">
+        <a href="{{ article.url }}" style="color: #ffffff;">{{ article.title }}</a>
       </div>
-    </div>
+    {% endfor %}
   </div>
 
   <script>
@@ -37,29 +45,15 @@
     carousel();
 
     function carousel() {
-      var i;
-      var slides = document.getElementsByClassName("blog-image");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  // Hide all images
-      }
+      var slides = document.querySelectorAll('.blog-slideshow img');
       slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      slides[slideIndex - 1].style.display = "block";  // Display the current image
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides.forEach(function(slide) {
+        slide.classList.remove('active');
+      });
+      slides[slideIndex - 1].classList.add('active');
       setTimeout(carousel, 2000); // Change image every 2 seconds
     }
-
-    // Add event listeners to handle hover
-    var links = document.querySelectorAll('.image-link');
-    links.forEach(function(link) {
-      link.addEventListener('mouseenter', function(event) {
-        var currentImage = event.currentTarget.querySelector('.blog-image');
-        currentImage.style.display = "block";
-      });
-      link.addEventListener('mouseleave', function(event) {
-        var currentImage = event.currentTarget.querySelector('.blog-image');
-        currentImage.style.display = "none";
-      });
-    });
   </script>
 {% endunless %}
 
