@@ -6,7 +6,7 @@
     {% for article in blog.articles limit: section.settings.liquid-range %}
       <div class="grid__item medium-up--one-third">
         <a href="{{ article.url }}">
-          <img src="{{ article.image | img_url: "300" }}" style="height: 350px; width: 400px; margin-bottom: 20px;" />
+          <img src="{{ article.image | img_url: "300" }}" style="height: 350px; width: 350px; margin-bottom: 20px;" />
         </a>
         <br/>
         <a href="{{ article.url }}">{{ article.title }}</a>
