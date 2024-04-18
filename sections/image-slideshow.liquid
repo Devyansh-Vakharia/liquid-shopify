@@ -2,59 +2,36 @@
 
 {% unless blog.articles_count == 0 %}
   <style>
-    .blog-slideshow {
-      position: relative;
+    .blog-images {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
       max-width: 100%;
-      margin: auto;
-      overflow: hidden;
     }
-    .blog-slideshow img {
+    .blog-image {
+      width: 30%; /* Adjust as needed */
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+    .blog-image img {
       width: 100%;
       height: auto;
       border-radius: 15px;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    .blog-slideshow img.active {
-      opacity: 1;
-    }
-    .blog-caption {
-      position: absolute;
-      bottom: 8px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #ffffff;
-      padding: 10px;
-      border-radius: 5px;
-      text-align: center;
-      font-size: 14px;
     }
   </style>
-  <div class="blog-slideshow">
+  <div class="blog-images">
     {% for article in blog.articles limit: section.settings.liquid-range %}
-      <img src="{{ article.image | img_url: "700x" }}" alt="{{ article.title }}" class="{% if forloop.index == 1 %}active{% endif %}" />
-      <div class="blog-caption">
-        <a href="{{ article.url }}" style="color: #ffffff;">{{ article.title }}</a>
+      <div class="blog-image">
+        <a href="{{ article.url }}">
+          <img src="{{ article.image | img_url: "300x" }}" alt="{{ article.title }}" />
+        </a>
+        <div class="blog-caption">
+          <a href="{{ article.url }}">{{ article.title }}</a>
+        </div>
       </div>
     {% endfor %}
   </div>
-
-  <script>
-    var slideIndex = 0;
-    carousel();
-
-    function carousel() {
-      var slides = document.querySelectorAll('.blog-slideshow img');
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1; }
-      slides.forEach(function(slide) {
-        slide.classList.remove('active');
-      });
-      slides[slideIndex - 1].classList.add('active');
-      setTimeout(carousel, 2000); // Change image every 2 seconds
-    }
-  </script>
 {% endunless %}
 
 {% schema %}
