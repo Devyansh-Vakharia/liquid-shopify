@@ -4,9 +4,9 @@
   <div class="page-width">
     <div class="grid grid--uniform grid--blog">
     {% for article in blog.articles limit: section.settings.liquid-range %}
-      <div class="grid__item medium-up--one-third">
+      <div class="grid__item medium-up--one-third" style="margin-bottom: 40px;">
         <a href="{{ article.url }}">
-          <img src="{{ article.image | img_url: "300" }}" style="height: 200px; width: auto; margin-bottom: 20px;" />
+          <img src="{{ article.image | img_url: "300" }}" style="height: 200px; width: auto;" />
         </a>
         <br/>
         <a href="{{ article.url }}">{{ article.title }}</a>
