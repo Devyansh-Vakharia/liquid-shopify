@@ -86,7 +86,7 @@
     "blog_posts_3Lk3tr": {
       "type": "blog-posts",
       "settings": {
-        "liquid-range": 6,
+        "liquid-range": 3,
         "new-blog": "news"
       }
     },
