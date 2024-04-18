@@ -226,112 +226,6 @@
         "padding_bottom": 36
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "summer-collection"
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "shirt",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "summer-collection-2"
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "Ribbo Classics",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Elevate Your Wardrobe<\/strong>",
-            "text": "<p>The image captures a serene morning scene, with soft sunlight filtering through sheer curtains onto a minimalist bedroom. <\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Effortless Chic<\/strong>",
-            "text": "<p>They are dressed in the epitome of street style: a sleek black leather jacket layered over a comfortable yet chic graphic tee.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_F3Bt4H": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Classics Collection<\/strong>",
-            "text": "<p> The centerpiece is a sumptuous camel-colored cashmere coat, exuding understated luxury and timeless elegance.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column_F3Bt4H"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_slideshow_RYLtU8": {
       "type": "image-slideshow",
       "settings": {
@@ -378,9 +272,6 @@
     "rich_text_hRxqYP",
     "rich_text_LUhgCV",
     "collection_list_PbH3hV",
-    "collage",
-    "video",
-    "multicolumn",
     "image_slideshow_RYLtU8",
     "featured_collection_4gKw3c"
   ]
