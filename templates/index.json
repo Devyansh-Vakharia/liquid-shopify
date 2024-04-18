@@ -145,13 +145,24 @@
         "text_RePXVP": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<h2>We've delivered over 6 Lakh orders in last 1 year & These are some top picks<\/h2>"
           }
         },
-        "button_JGxxxT": {
+        "button_PDbDbX": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Silk",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "Cotton",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "button_tR8ARH": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
             "button_link": "",
             "button_style_secondary": false,
             "button_label_2": "",
@@ -163,7 +174,8 @@
       "block_order": [
         "heading_FrbXd7",
         "text_RePXVP",
-        "button_JGxxxT"
+        "button_PDbDbX",
+        "button_tR8ARH"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -172,34 +184,6 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "pose",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "portrait",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 28,
-        "padding_bottom": 36
       }
     },
     "collage": {
@@ -307,6 +291,46 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collection_list_PbH3hV": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_kUNkjF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "summer-collection-1"
+          }
+        },
+        "featured_collection_CkpdjM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pose"
+          }
+        },
+        "featured_collection_DVxKyp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "summer-collection-2"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_kUNkjF",
+        "featured_collection_CkpdjM",
+        "featured_collection_DVxKyp"
+      ],
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -315,9 +339,9 @@
     "blog_posts_3Lk3tr",
     "rich_text_hRxqYP",
     "rich_text_LUhgCV",
-    "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "collection_list_PbH3hV"
   ]
 }
