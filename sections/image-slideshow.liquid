@@ -1,15 +1,32 @@
 {% assign blog = section.settings.new-blog %}
 
-{% unless blog.articles_count ==  0 %}
+{% unless blog.articles_count == 0 %}
   <style>
     .blog-image {
       border-radius: 15px; /* Adjust the value as needed */
     }
+    .slideshow-container {
+      position: relative;
+      max-width: 350px;
+      margin: auto;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active {
+      background-color: #717171;
+    }
   </style>
-  <div class="page-width">
-    <div class="grid grid--uniform grid--blog">
+  <div class="slideshow-container">
     {% for article in blog.articles limit: section.settings.liquid-range %}
-      <div class="grid__item medium-up--one-third">
+      <div class="mySlides">
         <a href="{{ article.url }}">
           <img src="{{ article.image | img_url: "300" }}" class="blog-image" style="height: 350px; width: 350px; margin-bottom: 20px;" />
         </a>
@@ -19,10 +36,47 @@
         <br/>
       </div>
     {% endfor %}
-    </div>
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
-{% endunless %}
+  <br>
+  <!-- Dots -->
+  <div style="text-align:center">
+    {% for article in blog.articles limit: section.settings.liquid-range %}
+      <span class="dot" onclick="currentSlide({{ forloop.index }})"></span>
+    {% endfor %}
+  </div>
 
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+{% endunless %}
 
 {% schema %}
 {
@@ -41,7 +95,6 @@
       "id": "new-blog",
       "type": "blog",
       "label": "Blog"
-      
     }
   ],
   "presets": [
