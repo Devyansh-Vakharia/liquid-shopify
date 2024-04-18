@@ -186,6 +186,46 @@
         "padding_bottom": 52
       }
     },
+    "collection_list_PbH3hV": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_kUNkjF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "summer-collection-1"
+          }
+        },
+        "featured_collection_CkpdjM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "pose"
+          }
+        },
+        "featured_collection_DVxKyp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "summer-collection-2"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_kUNkjF",
+        "featured_collection_CkpdjM",
+        "featured_collection_DVxKyp"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collage": {
       "type": "collage",
       "blocks": {
@@ -291,46 +331,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "collection_list_PbH3hV": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_kUNkjF": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "summer-collection-1"
-          }
-        },
-        "featured_collection_CkpdjM": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pose"
-          }
-        },
-        "featured_collection_DVxKyp": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "summer-collection-2"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_kUNkjF",
-        "featured_collection_CkpdjM",
-        "featured_collection_DVxKyp"
-      ],
-      "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "portrait",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -339,9 +339,9 @@
     "blog_posts_3Lk3tr",
     "rich_text_hRxqYP",
     "rich_text_LUhgCV",
+    "collection_list_PbH3hV",
     "collage",
     "video",
-    "multicolumn",
-    "collection_list_PbH3hV"
+    "multicolumn"
   ]
 }
