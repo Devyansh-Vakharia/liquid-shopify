@@ -2,17 +2,12 @@
 
 {% unless blog.articles_count == 0 %}
   <style>
-    .blog-slideshow {
-      position: relative;
-      overflow: hidden;
-      margin: 0 auto;
-      max-width: 1200px;
-    }
     .blog-images {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
-      transition: transform 0.5s ease;
+      margin: 0 auto;
+      max-width: 1200px;
     }
     .blog-image {
       position: relative;
@@ -25,6 +20,9 @@
       width: 100%;
       height: auto;
       transition: transform 0.3s ease;
+    }
+    .blog-image:hover {
+      transform: scale(1.05);
     }
     .blog-caption {
       position: absolute;
@@ -40,98 +38,29 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .blog-dots {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-    }
-    .blog-dot {
-      width: 10px;
-      height: 10px;
-      background-color: #bbb;
-      border-radius: 50%;
-      margin: 0 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .blog-dot.active {
-      background-color: #333;
-    }
   </style>
-
-  <div class="blog-slideshow">
-    <div class="blog-images">
-      {% for article in blog.articles limit: section.settings.liquid-range %}
-        <div class="blog-image">
-          <a href="{{ article.url }}">
-            <img src="{{ article.image | img_url: "400x" }}" alt="{{ article.title }}" />
-          </a>
-          <div class="blog-caption">
-            <a href="{{ article.url }}">{{ article.title }}</a>
-          </div>
+  <div class="blog-images">
+    {% for article in blog.articles limit: section.settings.liquid-range %}
+      <div class="blog-image">
+        <a href="{{ article.url }}">
+          <img src="{{ article.image | img_url: "400x" }}" alt="{{ article.title }}" />
+        </a>
+        <div class="blog-caption">
+          <a href="{{ article.url }}">{{ article.title }}</a>
         </div>
-      {% endfor %}
-    </div>
-    <div class="blog-dots">
-      {% for i in (1..blog.articles_count) %}
-        <div class="blog-dot" data-index="{{ i }}"></div>
-      {% endfor %}
-    </div>
+      </div>
+    {% endfor %}
   </div>
-
-  <script>
-    // Slideshow functionality
-    var blogSlideshow = document.querySelector('.blog-slideshow');
-    var blogImages = document.querySelector('.blog-images');
-    var blogDots = document.querySelectorAll('.blog-dot');
-    var imageCount = {{ blog.articles_count }};
-    var currentIndex = 0;
-    var slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % imageCount;
-      var offset = -currentIndex * 100;
-      blogImages.style.transform = 'translateX(' + offset + '%)';
-      updateDots();
-    }
-
-    function updateDots() {
-      blogDots.forEach(function(dot, index) {
-        if (index === currentIndex) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
-      });
-    }
-
-    blogDots.forEach(function(dot) {
-      dot.addEventListener('click', function() {
-        currentIndex = parseInt(dot.getAttribute('data-index')) - 1;
-        nextSlide();
-      });
-    });
-
-    blogSlideshow.addEventListener('mouseover', function() {
-      clearInterval(slideInterval);
-    });
-
-    blogSlideshow.addEventListener('mouseleave', function() {
-      slideInterval = setInterval(nextSlide, 5000);
-    });
-  </script>
 {% endunless %}
 
 {% schema %}
 {
-  "name": "Image Slideshow",
+  "name": "New Blog Posts",
   "settings": [
     {
       "id": "liquid-range",
       "type": "range",
-      "label": "Number of Posts",
+      "label": "Range",
       "min": 3,
       "max": 12,
       "step": 3,
@@ -140,13 +69,13 @@
     {
       "id": "new-blog",
       "type": "blog",
-      "label": "Select Blog"
+      "label": "Blog"
     }
   ],
   "presets": [
     {
-      "name": "Image Slideshow",
-      "category": "Content"
+      "name": "New Blog Posts",
+      "category": "Posts"
     }
   ]
 }
