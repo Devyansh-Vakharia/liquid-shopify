@@ -372,5 +372,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "a.button.button--primary {background-color: \"pink\" !important;}"
+    ]
   }
 }
