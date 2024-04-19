@@ -14,15 +14,26 @@
 
 <body>
 
-  <div class="blog-images">
-    {% for article in blog.articles limit: section.settings.liquid-range %}
-      <div class="blog-image">
-        <a href="{{ article.url }}">
-          <img src="{{ article.image | img_url: "400x" }}" alt="{{ article.title }}" />
+  <div class="container">
+    {% for product in collection_main.products limit: section.settings.slides_to_show %}
+      {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
+      {% assign first_variant = product.selected_or_first_available_variant %}
+      {% assign featured_img_src = first_variant.featured_img.src | default: product.featured_image.src %}
+      {% assign price = first_variant.price %}
+      {% assign compare_at_price = first_variant.compare_at_price %}
+      <div class="carousel__cell" style="width:{{ section.settings.cell_width }};margin-right:{{ section.settings.mr }}px">
+        <a href="{{ product.url }}">
+          <img src="{{ featured_img_src | img_url: section.settings.img_width }}" alt="{{ product.featured_img.alt }}" />
         </a>
-        <div class="blog-caption">
-          <a href="{{ article.url }}">{{ article.title }}</a>
-        </div>
+        <a href="{{ product.url }}">
+          <h5>{{ product.title }}</h5>
+        </a>
+        {% if compare_at_price > price %}
+          <s class="product__compare-at-price">{{ compare_at_price | money }}</s>
+          <p class="product__product-price">{{ price | money }}</p>
+        {% else %}
+          <p class="product__product-price">{{ price | money }}</p>
+        {% endif %}
       </div>
     {% endfor %}
   </div>
@@ -33,10 +44,10 @@
 
   <script>
     $(document).ready(function() {
-      $('.blog-image').slick({
+      $('.container').slick({
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToShow: {{ section.settings.slides_to_show }},
+        slidesToScroll: {{ section.settings.slides_to_scroll }}
       });
     });
   </script>
@@ -47,11 +58,49 @@
 {% schema %}
 {
   "name": "Slick Collection Slider",
-  "settings": [{
-    "type": "collection",
-    "id": "collection_main",
-    "label": "Choose a Collection"
-  }],
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection_main",
+      "label": "Choose a Collection"
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show",
+      "label": "Number of Slides to Show",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "slides_to_scroll",
+      "label": "Number of Slides to Scroll",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "text",
+      "id": "cell_width",
+      "label": "Cell Width (e.g., '300px')",
+      "default": "300px"
+    },
+    {
+      "type": "text",
+      "id": "mr",
+      "label": "Margin Right (in pixels)",
+      "default": "10"
+    },
+    {
+      "type": "text",
+      "id": "img_width",
+      "label": "Image Width (in pixels)",
+      "default": "200"
+    }
+  ],
   "presets": [
     {
       "name": "Slick Collection Slider",
