@@ -1,28 +1,20 @@
-<!DOCTYPE html>
 <html>
-
-<head>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <!-- Include the slick CSS directly from the CDN -->
-  <style>
-    /* Add any custom styles here */
-    .slick-slide {
-      margin: 0 10px;
-    }
-  </style>
-</head>
-
-<body>
+  <head>
+  <title>My Now Amazing Webpage</title>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  </head>
+  <body>
 
   <div class="container">
-    <div><img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" alt="Girl in a jacket" width="100" height="100"></div>
-    <div>your content 2</div>
-    <div>your content 3</div>
-    <div>your content 4</div>
-    <div>your content 5</div>
-    <div>your content 6</div>
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
   </div>
 
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Make sure to use a stable version of jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -36,9 +28,19 @@
       });
     });
   </script>
-</body>
 
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.your-class').slick({
+        setting-name: setting-value
+      });
+    });
+  </script>
+
+  </body>
 </html>
+
+  
 
 {% schema %}
 {
