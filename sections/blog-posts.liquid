@@ -1,118 +1,84 @@
-{% comment %}
-  Schema Definition:
-  - Allow the merchant to select a collection to feature
-  - Optionally allow them to add a title and description
-{% endcomment %}
+{% assign blog = section.settings.new-blog %}
+
+{% unless blog.articles_count == 0 %}
+  <style>
+    .blog-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted minimum width for better medium-sized layout */
+      gap: 20px;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    .blog-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px; /* Reduced border radius for a more subtle effect */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Softened shadow for a lighter touch */
+      transition: transform 0.3s ease;
+    }
+    .blog-image img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    .blog-image:hover {
+      transform: scale(1.05);
+    }
+    .blog-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      text-align: center;
+      border-bottom-left-radius: 10px; /* Matching border radius for the caption */
+      border-bottom-right-radius: 10px;
+    }
+    .blog-caption a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+  <div class="blog-images">
+    {% for article in blog.articles limit: section.settings.liquid-range %}
+      <div class="blog-image">
+        <a href="{{ article.url }}">
+          <img src="{{ article.image | img_url: "800x" }}" alt="{{ article.title }}" /> <!-- Increased image size for better quality -->
+        </a>
+        <div class="blog-caption">
+          <a href="{{ article.url }}">{{ article.title }}</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endunless %}
 
 {% schema %}
 {
-  "name": "Featured Collection",
+  "name": "New Blog Posts",
   "settings": [
     {
-      "type": "text",
-      "id": "title",
-      "label": "Title",
-      "default": "Featured Collection"
+      "id": "liquid-range",
+      "type": "range",
+      "label": "Range",
+      "min": 3,
+      "max": 12,
+      "step": 3,
+      "default": 3
     },
     {
-      "type": "textarea",
-      "id": "description",
-      "label": "Description",
-      "default": "Explore our handpicked selection"
-    },
-    {
-      "type": "collection",
-      "id": "featured_collection",
-      "label": "Featured Collection"
+      "id": "new-blog",
+      "type": "blog",
+      "label": "Blog"
     }
   ],
   "presets": [
     {
-      "name": "Featured Collection",
-      "category": "Products"
+      "name": "New Blog Posts",
+      "category": "Posts"
     }
   ]
 }
 {% endschema %}
-
-{% comment %}
-  CSS Styling:
-  - Style the featured collection section to match the design of frido.com
-{% endcomment %}
-
-<style>
-  .featured-collection {
-    text-align: center;
-    padding: 50px 0;
-  }
-
-  .featured-collection-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-
-  .featured-collection-description {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 30px;
-  }
-
-  .featured-products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .featured-product {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  }
-
-  .featured-product:hover {
-    transform: translateY(-5px);
-  }
-
-  .featured-product-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .featured-product-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-
-  .featured-product-price {
-    font-size: 16px;
-    color: #666;
-  }
-</style>
-
-{% comment %}
-  HTML Structure:
-  - Display the title, description, and featured products
-{% endcomment %}
-
-<div class="featured-collection">
-  <div class="featured-collection-title">{{ section.settings.title }}</div>
-  <div class="featured-collection-description">{{ section.settings.description }}</div>
-  
-  <div class="featured-products">
-    {% for product in collections[section.settings.featured_collection].products limit: 4 %}
-      <div class="featured-product">
-        <a href="{{ product.url }}">
-          <img class="featured-product-image" src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
-          <div class="featured-product-title">{{ product.title }}</div>
-          <div class="featured-product-price">{{ product.price | money }}</div>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
-</div>
