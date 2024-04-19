@@ -132,7 +132,7 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#ffffff",
+          "background": "#fff",
           "background_gradient": "",
           "text": "#121212",
           "button": "#121212",
@@ -146,7 +146,7 @@
           "background": "#f3f3f3",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#121212",
+          "button": "#005c97",
           "button_label": "#f3f3f3",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
@@ -375,7 +375,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "a.button.button--primary {background-color: \"pink\" !important;}"
+
     ]
   }
 }
