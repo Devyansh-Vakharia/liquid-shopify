@@ -1,15 +1,26 @@
+<!DOCTYPE html>
 <html>
-  <head>
-  <title>My Now Amazing Webpage</title>
-  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-  </head>
-  <body>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- Include the slick CSS directly from the CDN -->
+  <style>
+    /* Add any custom styles here */
+    .slick-slide {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
 
   <div class="container">
     <div>your content 1</div>
     <div>your content 2</div>
     <div>your content 3</div>
+    <div>your content 4</div>
+    <div>your content 5</div>
+    <div>your content 6</div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -25,11 +36,9 @@
       });
     });
   </script>
+</body>
 
-  </body>
 </html>
-
-
 
 {% schema %}
 {
@@ -38,12 +47,6 @@
     "type": "collection",
     "id": "collection_main",
     "label": "Choose a Collection"
-  }],
-  "presets": [
-    {
-      "name": "Slick Collection Slider",
-      "category": "collection"
-    }
-  ]
+  }]
 }
 {% endschema %}
