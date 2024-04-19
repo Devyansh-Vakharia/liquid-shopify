@@ -3442,7 +3442,6 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
-.banner__buttons a {
-    
-    color: white;
+.rich-text__buttons{
+  background-color:"pink";
 }
