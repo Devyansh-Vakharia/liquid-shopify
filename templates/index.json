@@ -266,6 +266,14 @@
         "liquid-range": 3,
         "new-blog": "news"
       }
+    },
+    "collection_slider_GCEHfW": {
+      "type": "collection-slider",
+      "settings": {
+        "title": "Featured Collection",
+        "collection": "pose",
+        "product_count": 4
+      }
     }
   },
   "order": [
@@ -276,6 +284,7 @@
     "featured_collection_4gKw3c",
     "rich_text_LUhgCV",
     "collection_list_PbH3hV",
-    "image_slideshow_RYLtU8"
+    "image_slideshow_RYLtU8",
+    "collection_slider_GCEHfW"
   ]
 }
