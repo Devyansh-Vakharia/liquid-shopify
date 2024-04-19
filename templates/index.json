@@ -86,8 +86,9 @@
     "blog_posts_UCiUxr": {
       "type": "blog-posts",
       "settings": {
-        "liquid-range": 3,
-        "new-blog": "news"
+        "title": "Featured Collection",
+        "description": "Explore our handpicked selection",
+        "featured_collection": "pose"
       }
     },
     "rich_text_hRxqYP": {
