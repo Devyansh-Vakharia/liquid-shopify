@@ -3442,6 +3442,4 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
-.class="rich-text__buttons rich-text__buttons--multiple scroll-trigger animate--slide-in"{
-  background-color:"pink";
-}
+
