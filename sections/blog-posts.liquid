@@ -1,46 +1,14 @@
 {% assign blog = section.settings.new-blog %}
 
 {% unless blog.articles_count == 0 %}
-  <style>
-    .blog-images {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin: 0 auto;
-      max-width: 1200px;
-    }
-    .blog-image {
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px; /* Reduced border radius for a more subtle effect */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Softened shadow for a lighter touch */
-      transition: transform 0.3s ease;
-    }
-    .blog-image img {
-      width: 100%;
-      height: 100%;
-      transition: transform 0.3s ease;
-    }
-    .blog-image:hover {
-      transform: scale(1.05);
-    }
-    .blog-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 10px;
-      text-align: center;
-      border-bottom-left-radius: 10px; /* Matching border radius for the caption */
-      border-bottom-right-radius: 10px;
-    }
-    .blog-caption a {
-      color: red;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+<div class="featured-image-container">
+  <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}">
+  <div class="image-caption">
+    <p>{{ product.featured_image.alt }}</p>
+    <p>{{ product.featured_image.caption }}</p>
+  </div>
+</div>
+
   <div class="blog-images">
     {% for article in blog.articles limit: section.settings.liquid-range %}
       <div class="blog-image">
