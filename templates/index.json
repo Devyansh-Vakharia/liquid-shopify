@@ -278,7 +278,7 @@
         "cell_align": "left",
         "title_mb": 48,
         "cell_width": "25%",
-        "wrap_around": "false",
+        "wrap_around": "true",
         "mr": 15
       }
     }
