@@ -1,44 +1,76 @@
-<!DOCTYPE html>
-<html>
+{% assign blog = section.settings.collection_main %}
 
-<head>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <!-- Include the slick CSS directly from the CDN -->
+{% unless blog.articles_count == 0 %}
   <style>
-    /* Add any custom styles here */
-    .slick-slide {
-      margin: 0 10px;
+    .blog-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    .blog-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .blog-image img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    .blog-image:hover {
+      transform: scale(1.05);
+    }
+    .blog-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      text-align: center;
+    }
+    .blog-caption a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
-</head>
-
-<body>
-
-  <div class="container">
-    <div>your content 1</div>
-    <div>your content 2</div>
-    <div>your content 3</div>
-    <div>your content 4</div>
-    <div>your content 5</div>
-    <div>your content 6</div>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Make sure to use a stable version of jQuery -->
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <script>
     $(document).ready(function() {
-      $('.container').slick({
+      $('.blog-images').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3
       });
     });
   </script>
-</body>
+  <div class="blog-images">
+    {% for article in blog.articles limit: section.settings.liquid-range %}
+      <div class="blog-image">
+        <a href="{{ article.url }}">
+          <img src="{{ article.image | img_url: "400x" }}" alt="{{ article.title }}" />
+        </a>
+        <div class="blog-caption">
+          <a href="{{ article.url }}">{{ article.title }}</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endunless %}
 
-</html>
+
+
+
+
+
 
 {% schema %}
 {
