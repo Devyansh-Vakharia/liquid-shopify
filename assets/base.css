@@ -3442,6 +3442,7 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
-.button button--primary{
-  background-color: "pink";
+.banner__buttons a {
+    background: white;
+    color: black;
 }
