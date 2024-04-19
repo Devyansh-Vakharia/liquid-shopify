@@ -284,8 +284,9 @@
     },
     "slick_collection_slider_NEDFNr": {
       "type": "slick-collection-slider",
+      "disabled": true,
       "settings": {
-        "collection_main": "pose"
+        "collection_main": ""
       }
     }
   },
