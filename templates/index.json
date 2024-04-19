@@ -281,6 +281,12 @@
         "wrap_around": "true",
         "mr": 15
       }
+    },
+    "slick_collection_slider_NEDFNr": {
+      "type": "slick-collection-slider",
+      "settings": {
+        "collection_main": "pose"
+      }
     }
   },
   "order": [
@@ -292,6 +298,7 @@
     "rich_text_LUhgCV",
     "collection_list_PbH3hV",
     "image_slideshow_RYLtU8",
-    "collection_slider_GdAXGn"
+    "collection_slider_GdAXGn",
+    "slick_collection_slider_NEDFNr"
   ]
 }
