@@ -267,12 +267,19 @@
         "new-blog": "news"
       }
     },
-    "collection_slider_GCEHfW": {
+    "collection_slider_GdAXGn": {
       "type": "collection-slider",
       "settings": {
-        "title": "Featured Collection",
-        "collection": "pose",
-        "product_count": 4
+        "collection_main": "pose",
+        "collection_limit": 4,
+        "bg": "",
+        "title": "Featured Collection Slider",
+        "img_width": 225,
+        "cell_align": "left",
+        "title_mb": 48,
+        "cell_width": "25%",
+        "wrap_around": "true",
+        "mr": 15
       }
     }
   },
@@ -285,6 +292,6 @@
     "rich_text_LUhgCV",
     "collection_list_PbH3hV",
     "image_slideshow_RYLtU8",
-    "collection_slider_GCEHfW"
+    "collection_slider_GdAXGn"
   ]
 }
