@@ -277,10 +277,11 @@
         "collection_limit": 4,
         "bg": "",
         "title": "Featured Collection Slider",
-        "img_width": 290,
+        "img_width": 350,
         "cell_align": "left",
-        "title_mb": 48,
-        "wrap_around": "true"
+        "cell_width": "25%",
+        "wrap_around": "true",
+        "mr": 16
       }
     },
     "slick_collection_slider_NEDFNr": {
