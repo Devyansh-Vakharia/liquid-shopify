@@ -280,7 +280,7 @@
         "collection_limit": 4,
         "bg": "",
         "title": "Featured Collection Slider",
-        "img_width": 270,
+        "img_width": 260,
         "cell_align": "left",
         "wrap_around": "true"
       }
