@@ -86,10 +86,10 @@
     "blog_posts_UCiUxr": {
       "type": "blog-posts",
       "custom_css": [
-        ".blog-image{height: 400px;}"
+        ".blog-image {height: 400px; width: 300px;}"
       ],
       "settings": {
-        "liquid-range": 3,
+        "liquid-range": 6,
         "new-blog": "news"
       }
     },
