@@ -107,3 +107,129 @@
     "autoPlay": true // Optional: enable autoplay
   });
 </script>
+{% schema %}
+{
+"name": "Collection Slider",
+"settings": [
+{
+"type": "collection",
+"id": "collection_main",
+"label": "Choose a Collection"
+},
+{
+"type": "range",
+"id": "collection_limit",
+"min": 2,
+"max": 50,
+"step": 1,
+"unit": ".",
+"label": "How many products to show",
+"default": 4
+},
+{
+"type": "color",
+"id": "bg",
+"label": "Background Color"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "Featured Collection Slider"
+},
+{
+"type": "range",
+"id": "img_width",
+"min": 200,
+"max": 600,
+"step": 5,
+"unit": "px",
+"label": "Image Width",
+"default": 200
+},
+{
+"type": "select",
+"id": "cell_align",
+"label": "Slide Alignment",
+"options": [
+{
+"value": "center",
+"label": "Center"
+},
+{
+"value": "left",
+"label": "Left"
+}
+],
+"default": "center"
+},
+{
+"type": "range",
+"id": "title_mb",
+"min": 30,
+"max": 120,
+"step": 1,
+"unit": "px",
+"label": "Title Margin Bottom",
+"default": 48
+},
+{
+"type": "select",
+"id": "cell_width",
+"label": "Choose number of slides to show on start",
+"options": [
+{
+"value": "25%",
+"label": "Four"
+},
+{
+"value": "20%",
+"label": "Five"
+},
+{
+"value": "16.6666667%",
+"label": "Six"
+},
+{
+"value": "12.5%",
+"label": "Eight"
+}
+],
+"default": "25%"
+},
+{
+"type": "radio",
+"id": "wrap_around",
+"label": "Enable Wrap Around (endless scrolling)",
+"options": [
+{
+"value": "true",
+"label": "True"
+},
+{
+"value": "false",
+"label": "False"
+}
+],
+"default": "true"
+},
+{
+"type": "range",
+"id": "mr",
+"min": 0,
+"max": 48,
+"step": 1,
+"unit": "px",
+"label": "Cell Margin Right",
+"default": 16,
+"info": "Save page to see changes."
+}
+],
+"presets": [
+{
+"name": "Collection Slider",
+"category": "Slider"
+}
+]
+}
+{% endschema %}
