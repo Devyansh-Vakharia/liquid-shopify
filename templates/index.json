@@ -273,8 +273,7 @@
     "collection_slider_GdAXGn": {
       "type": "collection-slider",
       "custom_css": [
-        ".carousel-cell {margin-right: 15px; }",
-        ".carousel-cell:last-child {margin-right: 0;}"
+        ".carousel-cell {margin-right: 15px;}"
       ],
       "settings": {
         "collection_main": "pose",
