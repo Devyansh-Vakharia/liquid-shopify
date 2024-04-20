@@ -86,7 +86,7 @@
     "blog_posts_UCiUxr": {
       "type": "blog-posts",
       "custom_css": [
-        ".blog-image {height: 400px; width: 285px;}"
+        ".blog-image {height: 400px; width: 289px;}"
       ],
       "settings": {
         "liquid-range": 6,
