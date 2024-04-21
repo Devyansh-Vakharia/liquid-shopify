@@ -130,7 +130,7 @@
       ],
       "custom_css": [
         ".isolate {margin-top: 50px;}",
-        ".button--primary {border-radius: 50px;}"
+        ".button--primary {border-radius: 50px; position: relative;}"
       ],
       "settings": {
         "desktop_content_position": "center",
