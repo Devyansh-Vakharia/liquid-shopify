@@ -273,7 +273,7 @@
     "collection_slider_GdAXGn": {
       "type": "collection-slider",
       "custom_css": [
-        ".carousel-cell {margin-right: 12px; position: relative; transition: transform 0.3s ease-in-out; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); background-color: #fff; border: 4px solid #000000;}"
+        ".carousel-cell {margin-right: 12px; position: relative; transition: transform 0.3s ease-in-out; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); background-color: #fff; border: 2px solid #000000;}"
       ],
       "settings": {
         "collection_main": "pose",
