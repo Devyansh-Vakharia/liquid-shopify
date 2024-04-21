@@ -251,7 +251,7 @@
     "collection_slider_YddYMA": {
       "type": "collection-slider",
       "settings": {
-        "collection_main": "summer-collection",
+        "collection_main": "",
         "collection_limit": 4,
         "title": "Featured Collection Slider",
         "img_width": 200
