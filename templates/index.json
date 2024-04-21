@@ -277,7 +277,7 @@
     "collection_slider_GdAXGn": {
       "type": "collection-slider",
       "custom_css": [
-
+        ".carousel-cell{position: relative;}"
       ],
       "settings": {
         "title": "Featured Collection Slider",
