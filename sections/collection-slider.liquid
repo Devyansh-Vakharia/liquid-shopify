@@ -107,16 +107,21 @@
     </div>
   </div>
 </div>
+<img class="product-image hover-image" src="{{ featured_img_src | img_url: img_width }}" alt="{{ product.featured_img.alt }}" />
 
 <script>
   // jQuery for hover effect
-  $('.carousel-cell').on('mouseenter', function() {
-    $(this).find('.overlay').css('opacity', '0.9');
+<script>
+
+  $('.hover-image').on('mouseenter', function() {
+    $(this).closest('.carousel-cell').find('.overlay').css('opacity', '0.9');
   });
 
-  $('.carousel-cell').on('mouseleave', function() {
-    $(this).find('.overlay').css('opacity', '0');
+  $('.hover-image').on('mouseleave', function() {
+    $(this).closest('.carousel-cell').find('.overlay').css('opacity', '0');
   });
+</script>
+
 </script>
 
 {% schema %}
