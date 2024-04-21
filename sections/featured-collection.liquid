@@ -58,8 +58,6 @@
   endif
 -%}
 
-
-
 <div
   class="color-{{ section.settings.color_scheme }} isolate gradient"
 >
@@ -173,23 +171,6 @@
           </button>
         </div>
       {%- endif -%}
-      {%- if show_mobile_slider or show_desktop_slider -%}
-  <div class="slider-buttons">
-    <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}" aria-controls="Slider-{{ section.id }}">
-      {% render 'icon-caret' %}
-    </button>
-    <div class="pagination-dots">
-      {% for i in (1..products_to_display) %}
-        <button type="button" class="pagination-dot{% if forloop.index == 1 %} active{% endif %}" data-slide="{{ forloop.index }}" aria-label="Go to slide {{ forloop.index }}">
-          {{ forloop.index }}
-        </button>
-      {% endfor %}
-    </div>
-    <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}" aria-controls="Slider-{{ section.id }}">
-      {% render 'icon-caret' %}
-    </button>
-  </div>
-{%- endif -%}
     </slider-component>
 
     {%- if section.settings.show_view_all and more_in_collection -%}
