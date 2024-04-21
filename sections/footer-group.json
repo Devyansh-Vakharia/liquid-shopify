@@ -5,13 +5,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-1": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Info",
-            "menu": "footer"
-          }
-        },
         "footer-0": {
           "type": "link_list",
           "settings": {
@@ -35,7 +28,6 @@
         }
       },
       "block_order": [
-        "footer-1",
         "footer-0",
         "footer-2",
         "text_zQhPRF"
