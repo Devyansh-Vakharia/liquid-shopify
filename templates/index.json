@@ -277,12 +277,12 @@
     "collection_slider_GdAXGn": {
       "type": "collection-slider",
       "custom_css": [
-        ".carousel-cell {position: relative; height:400px; width:50px;}"
+        ".carousel-cell {position: relative; height: 400px; width: 50px;}"
       ],
       "settings": {
         "title": "Featured Collection Slider",
         "collection": "pose",
-        "product_count": 4
+        "product_count": 7
       }
     },
     "slick_collection_slider_NEDFNr": {
