@@ -129,7 +129,8 @@
         "button_APdVg6"
       ],
       "custom_css": [
-        ".isolate {margin-top: 50px;}"
+        ".isolate {margin-top: 50px;}",
+        ".button{border-radius: 50px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
