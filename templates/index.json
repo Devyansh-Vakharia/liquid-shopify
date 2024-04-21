@@ -277,11 +277,7 @@
     "collection_slider_GdAXGn": {
       "type": "collection-slider",
       "custom_css": [
-        ".carousel-wrapper {margin: 0 auto; max-width: 1200px; padding: 20px;}",
-        ".carousel-cell {position: relative; transition: transform 0.3s ease-in-out; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); background-color: #fff; text-align: center;}",
-        ".carousel-cell:hover {transform: scale(1.03); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}",
-        ".carousel-cell a {text-decoration: none; color: inherit;}",
-        ".product-image {width: 100%; display: block; border-bottom: 1px solid #eee;}"
+
       ],
       "settings": {
         "collection_main": "pose",

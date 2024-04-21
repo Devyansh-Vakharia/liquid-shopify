@@ -8,70 +8,65 @@
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
 <style>
-  /* Carousel styling */
-  .carousel-wrapper {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 20px;
-  }
+  
+.carousel-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+.carousel-cell {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 100%; 
+}
+.carousel-cell:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.carousel-cell a {
+  text-decoration: none;
+  color: inherit;
+  display: block; 
+}
+.product-image {
+  width: 100%;
+  height: auto; 
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-cell:hover .overlay {
+  opacity: 1;
+}
+.overlay-text {
+  color: white;
+  font-size: 1.2rem;
+}
+.product-title {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+.product-price {
+  margin: 5px 0;
+  font-size: 1rem;
+}
 
-  .carousel-cell {
-    position: relative;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-  }
-
-  .carousel-cell:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .carousel-cell a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .product-image {
-    width: 100%;
-    display: block;
-    border-bottom: 1px solid #eee;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .carousel-cell:hover .overlay {
-    opacity: 1;
-  }
-
-  .overlay-text {
-    color: white;
-    font-size: 1.2rem;
-  }
-
-  .product-title {
-    margin: 10px 0;
-    font-size: 1.1rem;
-  }
-
-  .product-price {
-    margin: 5px 0;
-    font-size: 1rem;
-  }
 </style>
 
 <div class="flickity-section-{{ section.id }} flickity-index-slider collection" style="background-color: {{ section.settings.bg }}">
