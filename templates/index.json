@@ -241,18 +241,20 @@
         "padding_bottom": 36
       }
     },
-    "image_slideshow_RYLtU8": {
-      "type": "image-slideshow",
-      "settings": {
-        "liquid-range": 3,
-        "new-blog": "news"
-      }
-    },
     "slick_collection_slider_NEDFNr": {
       "type": "slick-collection-slider",
       "disabled": true,
       "settings": {
         "collection_main": ""
+      }
+    },
+    "collection_slider_YddYMA": {
+      "type": "collection-slider",
+      "settings": {
+        "collection_main": "summer-collection",
+        "collection_limit": 4,
+        "title": "Featured Collection Slider",
+        "img_width": 200
       }
     }
   },
@@ -264,7 +266,7 @@
     "rich_text_LUhgCV",
     "collection_slider_GdAXGn",
     "featured_collection_4gKw3c",
-    "image_slideshow_RYLtU8",
-    "slick_collection_slider_NEDFNr"
+    "slick_collection_slider_NEDFNr",
+    "collection_slider_YddYMA"
   ]
 }
