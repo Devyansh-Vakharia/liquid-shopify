@@ -280,13 +280,9 @@
 
       ],
       "settings": {
-        "collection_main": "pose",
-        "collection_limit": 4,
-        "bg": "",
         "title": "Featured Collection Slider",
-        "img_width": 290,
-        "cell_align": "left",
-        "wrap_around": "true"
+        "collection": "pose",
+        "product_count": 4
       }
     },
     "slick_collection_slider_NEDFNr": {
