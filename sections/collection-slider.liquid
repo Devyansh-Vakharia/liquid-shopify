@@ -1,14 +1,11 @@
 {% assign collection_main = collections[section.settings.collection_main] %}
 {% assign collection_limit = section.settings.collection_limit %}
-{% assign cell_align = section.settings.cell_align %}
-{% assign wrap_around = section.settings.wrap_around %}
 {% assign img_width = section.settings.img_width | append: 'x' %}
 
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
 <style>
-  
 .carousel-wrapper {
   margin: 0 auto;
   max-width: 1200px;
@@ -21,7 +18,7 @@
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  width: 100%; 
+  width: 300px; /* Adjust the width of each cell */
 }
 .carousel-cell:hover {
   transform: scale(1.03);
@@ -69,17 +66,11 @@
 
 </style>
 
-<div class="flickity-section-{{ section.id }} flickity-index-slider collection" style="background-color: {{ section.settings.bg }}">
+<div class="flickity-section-{{ section.id }} flickity-index-slider collection">
   <div class="page-width">
     <h2 class="text-center mb-4">{{ section.settings.title }}</h2>
     <div class="carousel-wrapper">
-      <div class="carousel flickity-section__carousel" data-flickity='{
-        "cellAlign": "{{ cell_align }}",
-        "pageDots": true,
-        "freeScroll": true,
-        "contain": true,
-        "wrapAround": {{ wrap_around }}
-      }'>
+      <div class="carousel flickity-section__carousel" data-flickity='{"cellAlign": "left", "pageDots": true, "freeScroll": true, "contain": true, "wrapAround": true}'>
         {% for product in collection_main.products limit: collection_limit %}
           {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
           {% assign first_variant = product.selected_or_first_available_variant %}
@@ -140,12 +131,6 @@
       "default": 4
     },
     {
-      "type": "color",
-      "id": "bg",
-      "label": "Background Color",
-      "default": "#ffffff"
-    },
-    {
       "type": "text",
       "id": "title",
       "label": "Title",
@@ -160,38 +145,6 @@
       "unit": "px",
       "label": "Image Width",
       "default": 200
-    },
-    {
-      "type": "select",
-      "id": "cell_align",
-      "label": "Slide Alignment",
-      "options": [
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "left",
-          "label": "Left"
-        }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "radio",
-      "id": "wrap_around",
-      "label": "Enable Wrap Around",
-      "options": [
-        {
-          "value": "true",
-          "label": "Yes"
-        },
-        {
-          "value": "false",
-          "label": "No"
-        }
-      ],
-      "default": "true"
     }
   ],
   "presets": [
