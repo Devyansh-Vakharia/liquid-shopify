@@ -277,7 +277,7 @@
     "collection_slider_GdAXGn": {
       "type": "collection-slider",
       "custom_css": [
-        ".carousel-cell {position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); background-color: #fff; border: 4px solid #eee; width: -50px;}"
+        ".carousel-cell {position: relative; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); background-color: #fff; border: 4px solid #eee; width: 20px;}"
       ],
       "settings": {
         "collection_main": "pose",
