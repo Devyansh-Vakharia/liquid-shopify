@@ -5,17 +5,17 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-0": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
-          }
-        },
         "footer-1": {
           "type": "link_list",
           "settings": {
             "heading": "Info",
+            "menu": "footer"
+          }
+        },
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
             "menu": "footer"
           }
         },
@@ -25,12 +25,20 @@
             "heading": "Our mission",
             "subtext": "<p>At Ribbo Fashion, we believe that fashion is not merely about clothing; it's about self-expression, confidence, and empowerment.<\/p>"
           }
+        },
+        "text_zQhPRF": {
+          "type": "text",
+          "settings": {
+            "heading": "<strong>For General Queries & Support<\/strong>",
+            "subtext": "<p><strong>Phone<\/strong>:<a href=\"tel:+918208630585\" target=\"_blank\" title=\"tel:+918208630585\">+918208630585<\/a><\/p><p><strong>Email<\/strong>:<a href=\"mailto:devyanshvakharia2510@gmail.com\" target=\"_blank\" title=\"mailto:devyanshvakharia2510@gmail.com\">devyanshvakharia2510@gmail.com<\/a><\/p><p><\/p>"
+          }
         }
       },
       "block_order": [
-        "footer-0",
         "footer-1",
-        "footer-2"
+        "footer-0",
+        "footer-2",
+        "text_zQhPRF"
       ],
       "settings": {
         "color_scheme": "scheme-1",

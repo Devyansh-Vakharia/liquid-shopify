@@ -211,9 +211,7 @@
     "featured_collection_4gKw3c": {
       "type": "featured-collection",
       "custom_css": [
-        ".pagination-dots {text-align: center;}",
-        ".pagination-dot {display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #ccc; margin: 0 5px; cursor: pointer;}",
-        ".pagination-dot.active {background-color: #333;}"
+
       ],
       "settings": {
         "title": "Featured collection",
