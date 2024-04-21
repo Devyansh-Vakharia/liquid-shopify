@@ -199,7 +199,7 @@
     "collection_slider_GdAXGn": {
       "type": "collection-slider",
       "custom_css": [
-        ".carousel-cell {border: 1px solid #000000; margin-right: 10px;}"
+        ".carousel-cell {border: 1px solid #000000; margin-right: 10px; margin-bottom:20px;}"
       ],
       "settings": {
         "collection_main": "pose",
@@ -247,15 +247,6 @@
       "settings": {
         "collection_main": ""
       }
-    },
-    "collection_slider_YddYMA": {
-      "type": "collection-slider",
-      "settings": {
-        "collection_main": "",
-        "collection_limit": 4,
-        "title": "Featured Collection Slider",
-        "img_width": 200
-      }
     }
   },
   "order": [
@@ -266,7 +257,6 @@
     "rich_text_LUhgCV",
     "collection_slider_GdAXGn",
     "featured_collection_4gKw3c",
-    "slick_collection_slider_NEDFNr",
-    "collection_slider_YddYMA"
+    "slick_collection_slider_NEDFNr"
   ]
 }
