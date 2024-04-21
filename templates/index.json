@@ -87,8 +87,8 @@
       "type": "blog-posts",
       "custom_css": [
         ".blog-image {height: 400px; width: 289px;}",
-        ".blog-caption {background-color: white; padding: 30px;}",
-        ".blog-caption a {color: #000000; font-weight: bold;}"
+        ".blog-caption {background-color: white; padding: 20px;}",
+        ".blog-caption a {color: #000000; font-weight: bold; font-size:25px;}"
       ],
       "settings": {
         "liquid-range": 6,
