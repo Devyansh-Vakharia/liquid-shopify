@@ -277,16 +277,13 @@
     "collection_slider_GdAXGn": {
       "type": "collection-slider",
       "custom_css": [
-
+        ".carousel-cell {border: 1px solid #000000;}"
       ],
       "settings": {
         "collection_main": "pose",
         "collection_limit": 4,
-        "bg": "#ffffff",
         "title": "Featured Collection Slider",
-        "img_width": 255,
-        "cell_align": "center",
-        "wrap_around": "true"
+        "img_width": 255
       }
     },
     "slick_collection_slider_NEDFNr": {
