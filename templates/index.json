@@ -280,9 +280,13 @@
         ".carousel-cell {position: relative; height: 400px; width: 50px;}"
       ],
       "settings": {
+        "collection_main": "pose",
+        "collection_limit": 4,
+        "bg": "#ffffff",
         "title": "Featured Collection Slider",
-        "collection": "pose",
-        "product_count": 7
+        "img_width": 200,
+        "cell_align": "center",
+        "wrap_around": "true"
       }
     },
     "slick_collection_slider_NEDFNr": {
