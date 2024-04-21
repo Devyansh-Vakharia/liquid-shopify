@@ -22,8 +22,8 @@
         "footer-2": {
           "type": "text",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>At Ribbo Fashion, we believe that fashion is not merely about clothing; it's about self-expression, confidence, and empowerment.<\/p>"
+            "heading": "<strong>Information<\/strong>",
+            "subtext": "<ul><li><a href=\"\/pages\/liquid\" target=\"_blank\" title=\"Liquid\">About<\/a><\/li><li><a href=\"https:\/\/myfrido.com\/pages\/store-locator\">Store Locator<\/a><\/li><li><a href=\"https:\/\/myfrido.com\/pages\/become-a-retailer\">Become a Retailer<\/a><\/li><li><a href=\"https:\/\/myfrido.com\/pages\/corporate-gifting\">Corporate Gifting<\/a><\/li><li><a href=\"https:\/\/myfrido.com\/pages\/press-release\">Press Release<\/a><\/li><li><a href=\"https:\/\/myfrido.com\/pages\/terms-and-conditions\">Terms and Conditions<\/a><\/li><li><a href=\"https:\/\/myfrido.com\/pages\/privacy-cookie-policy\">Privacy & Cookie policy<\/a><\/li><li><a href=\"https:\/\/myfrido.com\/pages\/shipping-policy\">Shipping Policy<\/a><\/li><\/ul><p><\/p>"
           }
         },
         "text_zQhPRF": {
