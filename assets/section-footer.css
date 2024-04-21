@@ -515,7 +515,7 @@
     top: 0;
 }
 .footer-block--newsletter {
-    position: absolute;
+    position: relative;
     right: 0;
     top: 0;
 }
