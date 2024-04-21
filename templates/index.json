@@ -277,7 +277,7 @@
     "collection_slider_GdAXGn": {
       "type": "collection-slider",
       "custom_css": [
-
+        ".carousel-cell{border: black 20px;}"
       ],
       "settings": {
         "collection_main": "pose",
