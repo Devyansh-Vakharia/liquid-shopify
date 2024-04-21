@@ -1,99 +1,189 @@
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+{% comment %}
+  * Make sure you have the Flickity plugin installed and the proper license for this to function on your store
+  * Plugin, licensing, and documentation at https://flickity.metafizzy.co/
+{% endcomment %}
+
+{% assign collection_main = collections[section.settings.collection_main] %}
+{% assign collection_limit = section.settings.collection_limit %}
+{% assign cell_align = section.settings.cell_align %}
+{% assign wrap_around = section.settings.wrap_around %}
+{% assign img_width = section.settings.img_width | append: 'x' %}
+
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-{%- capture flickity_options -%}
-{
-  "prevNextButtons": true,
-  "pageDots": false,
-  "contain": true,
-  "cellAlign": "left",
-  "groupCells": true,
-  "arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
-}
-{%- endcapture -%}
- 
-<div class="featured-collection-slider page-width">
-{% if section.settings.title != blank %}
-<div class="section-header text-center">
-  <h2>{{ section.settings.title | escape }}</h2>
-</div>
-{% endif %}
- 
-{%- assign collection = collections[section.settings.collection] -%}
-{%- assign product_limit = section.settings.product_count -%}
- 
-    <div class="products-carousel js-flickity" data-flickity='{{ flickity_options }}'>
-      {% for product in collection.products limit: product_limit %}
-        <div class="carousel-cell">
-          <a href="{{ product.url | within: collection }}">
-            <img class="img-explore" src="{{ product.featured_image | img_url: 'master'}}">
-            <h4>{{ product.title }}</h4>
-            <p>{{ product.price | money }}</p>
-          </a>
-      </div>  
-    {% endfor %}
-    </div>
-</div>
- 
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
 <style>
-.featured-collection-slider{
-  padding-left: 55px;
-  padding-right: 55px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.featured-collection-slider .carousel-cell{
-  width:25%;
-  padding: 0 15px;
-  display: block;
-}
-.flickity-button:disabled{
-  pointer-events: all!important;
-}
-@media screen and (max-width: 920px){
-  .featured-collection-slider{
-    padding-left: 15px;
-    padding-right: 15px;
+  /* Add hover effect */
+  .carousel-cell {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
   }
-  .featured-collection-slider .carousel-cell{
-    width:50%;
+
+  .carousel-cell:hover {
+    transform: scale(1.05);
   }
-}
-@media screen and (max-width: 767px){
-  .featured-collection-slider .carousel-cell{
-    width:100%;
+
+  /* Add overlay for professional look */
+  .carousel-cell .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
-}
+
+  .carousel-cell:hover .overlay {
+    opacity: 1;
+  }
+
+  /* Style text in overlay */
+  .carousel-cell .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
 </style>
- 
+
+<div class="flickity-section-{{ section.id }} flickity-index-slider collection" style="background-color: {{ section.settings.bg }}">
+  <div class="page-width">
+    <h2 class="text-center mb-4">{{ section.settings.title }}</h2>
+    <div class="carousel-wrapper">
+      <div class="carousel flickity-section__carousel" data-flickity='{
+        "cellAlign": "{{ cell_align }}",
+        "pageDots": true,
+        "freeScroll": true,
+        "contain": true,
+        "wrapAround": {{ wrap_around }}
+      }'>
+        {% for product in collection_main.products limit: collection_limit %}
+          {%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}
+          {% assign first_variant = product.selected_or_first_available_variant %}
+          {% assign featured_img_src = first_variant.featured_img.src | default: product.featured_image.src %}
+          {% assign price = first_variant.price %}
+          {% assign compare_at_price = first_variant.compare_at_price %}
+          <div class="carousel-cell">
+            <a href="{{ product.url }}">
+              <img class="product-image" src="{{ featured_img_src | img_url: img_width }}" alt="{{ product.featured_img.alt }}" />
+              <div class="overlay">
+                <div class="overlay-text">View Details</div>
+              </div>
+            </a>
+            <a href="{{ product.url }}">
+              <h3 class="product-title">{{ product.title }}</h3>
+            </a>
+            <p class="product-price">
+              {% if compare_at_price > price %}
+                <s class="product-compare-at-price">{{ compare_at_price | money }}</s>
+              {% endif %}
+              {{ price | money }}
+            </p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Add JavaScript/jQuery if necessary
+  // For example, if you want to trigger hover effect based on a specific class or attribute of the image
+  // You can add a class or data attribute to the image and then use jQuery to handle the hover effect
+
+  $('.carousel-cell').on('mouseenter', function() {
+    // Add code to handle hover effect
+    $(this).find('.overlay').css('opacity', '1');
+  });
+
+  $('.carousel-cell').on('mouseleave', function() {
+    // Add code to handle hover effect
+    $(this).find('.overlay').css('opacity', '0');
+  });
+</script>
+
 {% schema %}
 {
   "name": "Collection Slider",
   "settings": [
     {
-      "type": "text",
-      "id": "title",
-      "label": "Heading",
-      "default": "Featured Collection"
-    },
-    {
       "type": "collection",
-      "id": "collection",
-      "label": "Collection"
+      "id": "collection_main",
+      "label": "Choose a Collection"
     },
     {
       "type": "range",
-      "id": "product_count",
-      "min": 4,
-      "max": 12,
-      "label": "Number of products to display",
+      "id": "collection_limit",
+      "min": 2,
+      "max": 50,
+      "step": 1,
+      "unit": ".",
+      "label": "How many products to show",
       "default": 4
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Featured Collection Slider"
+    },
+    {
+      "type": "range",
+      "id": "img_width",
+      "min": 200,
+      "max": 600,
+      "step": 5,
+      "unit": "px",
+      "label": "Image Width",
+      "default": 200
+    },
+    {
+      "type": "select",
+      "id": "cell_align",
+      "label": "Slide Alignment",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "radio",
+      "id": "wrap_around",
+      "label": "Enable Wrap Around",
+      "options": [
+        {
+          "value": "true",
+          "label": "Yes"
+        },
+        {
+          "value": "false",
+          "label": "No"
+        }
+      ],
+      "default": "true"
     }
   ],
   "presets": [
     {
-      "category": "Collection",
       "name": "Collection Slider",
-      "settings": {}
+      "category": "Slider"
     }
   ]
 }
