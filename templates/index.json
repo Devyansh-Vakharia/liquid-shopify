@@ -211,7 +211,8 @@
     "featured_collection_4gKw3c": {
       "type": "featured-collection",
       "custom_css": [
-        ".collection {margin-top:10px;}"
+        ".collection {margin-top: 10px;}",
+        ".card{border: 1px solid #000000;}"
       ],
       "settings": {
         "title": "Featured collection",
