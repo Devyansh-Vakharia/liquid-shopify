@@ -62,11 +62,11 @@
           "type": "button",
           "settings": {
             "button_label": "Shop by Size",
-            "button_link": "",
+            "button_link": "https:\/\/admin.shopify.com\/store\/devyansh2510\/themes\/141290963167\/editor?section=template--17699296346335__blog_posts_UCiUxr&customCss=true",
             "button_style_secondary": false,
             "button_label_2": "Shop by Comfort",
             "button_link_2": "",
-            "button_style_secondary_2": true
+            "button_style_secondary_2": false
           }
         }
       },
