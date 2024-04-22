@@ -211,7 +211,7 @@
     "featured_collection_4gKw3c": {
       "type": "featured-collection",
       "custom_css": [
-
+        ".collection {margin-top:10px;}"
       ],
       "settings": {
         "title": "Featured collection",
