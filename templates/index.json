@@ -86,7 +86,7 @@
     "blog_posts_UCiUxr": {
       "type": "blog-posts",
       "custom_css": [
-        ".blog-image {height: 400px; width: 289p border: 1px solid #000000;}",
+        ".blog-image {height: 400px; width: 289p; border: 1px solid #000000;}",
         ".blog-caption {background-color: white; padding: 20px;}",
         ".blog-caption a {color: #000000; font-weight: bold; font-size: 25px;}"
       ],
