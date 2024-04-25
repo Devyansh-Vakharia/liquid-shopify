@@ -173,6 +173,9 @@
         "heading_GRAERg",
         "text_6DcNd4"
       ],
+      "custom_css": [
+        ".rich-text__wrapper{background: #CCCCCC;}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
