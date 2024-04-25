@@ -20,6 +20,14 @@
             "text_style": "uppercase"
           }
         },
+        "inventory_K9z4GY": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 12,
+            "show_inventory_quantity": true
+          }
+        },
         "text_eDDK69": {
           "type": "text",
           "settings": {
@@ -32,23 +40,6 @@
           "settings": {
             "text": "❄️  Our Cool Rush Technology helps to provide a refreshing and cool experience",
             "text_style": "body"
-          }
-        },
-        "inventory_K9z4GY": {
-          "type": "inventory",
-          "settings": {
-            "text_style": "body",
-            "inventory_threshold": 12,
-            "show_inventory_quantity": true
-          }
-        },
-        "collapsible_tab_8qn8GY": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "content": "",
-            "page": ""
           }
         },
         "price": {
@@ -74,26 +65,12 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
-          }
-        },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
+            "icon": "check_mark",
+            "content": "<p>Shipping upto 2 days.<br\/>Return within 5 days after the delivery.<\/p><p><\/p>",
             "page": ""
           }
         },
@@ -126,16 +103,13 @@
         "judge_me_reviews_preview_badge_rKVjtH",
         "title",
         "text_wMmMgc",
+        "inventory_K9z4GY",
         "text_eDDK69",
         "text_8nrLKH",
-        "inventory_K9z4GY",
-        "collapsible_tab_8qn8GY",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
