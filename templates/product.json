@@ -189,7 +189,8 @@
         "text_twrJ39"
       ],
       "custom_css": [
-        ".rich-text__wrapper {background: #cccccc; padding-top: 100px; padding-bottom: 100px;}"
+        ".rich-text__wrapper {background: #cccccc; padding-top: 100px; padding-bottom: 100px;}",
+        "h2{padding-block:20px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
