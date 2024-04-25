@@ -165,7 +165,7 @@
         "text_6DcNd4": {
           "type": "text",
           "settings": {
-            "text": "<h3>What you wear is how you present yourself to the world, especially today, when human contacts are so quick.<\/h3>"
+            "text": "<h2>What you wear is how you present yourself to the world, especially today, when human contacts are so quick.<\/h2>"
           }
         },
         "heading_fAWnez": {
@@ -178,7 +178,7 @@
         "text_twrJ39": {
           "type": "text",
           "settings": {
-            "text": "<h3>Fashion is the armor to survive the reality of everyday life<\/h3>"
+            "text": "<h2>Fashion is the armor to survive the reality of everyday life<\/h2>"
           }
         }
       },
@@ -190,7 +190,7 @@
       ],
       "custom_css": [
         ".rich-text__wrapper {background: #cccccc; padding-top: 100px; padding-bottom: 100px;}",
-        "h2{padding-block:20px;}"
+        "h2 {padding-block: 20px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
