@@ -8,16 +8,16 @@
           "settings": {
           }
         },
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
+          }
+        },
+        "text_wMmMgc": {
+          "type": "text",
+          "settings": {
+            "text": "A promise of comfortable,best quality experience",
+            "text_style": "body"
           }
         },
         "inventory_K9z4GY": {
@@ -35,13 +35,6 @@
             "icon": "check_mark",
             "content": "",
             "page": ""
-          }
-        },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
           }
         },
         "price": {
@@ -117,11 +110,10 @@
       },
       "block_order": [
         "judge_me_reviews_preview_badge_rKVjtH",
-        "vendor",
         "title",
+        "text_wMmMgc",
         "inventory_K9z4GY",
         "collapsible_tab_8qn8GY",
-        "caption",
         "price",
         "variant_picker",
         "quantity_selector",
