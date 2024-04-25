@@ -214,7 +214,7 @@
         "h2 {font-weight: bold; text-shadow: 4px 4px 5px #ffffff; text-align: center;}",
         "p {font-size: 18px; text-align: center; text-shadow: 4px 4px 5px #ffffff;}",
         ".m_video {padding-top: 10px; padding-left: 10px; padding-right: 10px; border: 12px solid #ffffff;}",
-        ".vid-with-text-box {border: 1px solid #a9a9a9;}"
+        ".vid-with-text-box {border: 2px solid #a9a9a9;}"
       ],
       "settings": {
         "revrt": false,
