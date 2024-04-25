@@ -211,8 +211,8 @@
     "video_with_text_TidyNg": {
       "type": "video_with_text",
       "custom_css": [
-        "h2 {font-weight: bold; text-shadow: 2px 2px 8px #ffffff; text-align: center;}",
-        "p {font-size: 18px; text-align: center; text-shadow: 2px 2px 8px #ffffff;}",
+        "h2 {font-weight: bold; text-shadow: 4px 4px 5px #ffffff; text-align: center;}",
+        "p {font-size: 18px; text-align: center; text-shadow: 4px 4px 5px #ffffff;}",
         ".m_video {padding-top: 10px; padding-left: 10px; padding-right: 10px; border: 12px solid #ffffff;}",
         ".vid-with-text-box {border: 1px solid #a9a9a9;}"
       ],
