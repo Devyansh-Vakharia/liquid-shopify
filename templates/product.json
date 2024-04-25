@@ -141,7 +141,7 @@
         "content_layout": "no-overlap",
         "section_color_scheme": "",
         "color_scheme": "scheme-2",
-        "image_behavior": "none",
+        "image_behavior": "ambient",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
@@ -207,12 +207,30 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "video_with_text_TidyNg": {
+      "type": "video_with_text",
+      "settings": {
+        "revrt": false,
+        "m_revrt": false,
+        "heading": "Video With Text",
+        "content": "",
+        "url": "",
+        "btn_label": "",
+        "select": "MP4",
+        "vid": "https:\/\/www.pexels.com\/video\/a-woman-behind-a-man-with-a-gun-8059162\/",
+        "check": true,
+        "i_vid": "",
+        "bg_clr": false,
+        "body_text": "#cdcdcd"
+      }
     }
   },
   "order": [
     "main",
     "image-with-text",
     "multicolumn",
-    "related-products"
+    "related-products",
+    "video_with_text_TidyNg"
   ]
 }
