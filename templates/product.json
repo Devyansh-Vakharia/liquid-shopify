@@ -158,32 +158,20 @@
         "heading_GRAERg": {
           "type": "heading",
           "settings": {
-            "heading": "",
-            "heading_size": "h1"
+            "heading": "Clothes are the spirit of fashion",
+            "heading_size": "h0"
           }
         },
         "text_6DcNd4": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        },
-        "button_CHiyjX": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<h3>What you wear is how you present yourself to the world, especially today, when human contacts are so quick.<\/h3>"
           }
         }
       },
       "block_order": [
         "heading_GRAERg",
-        "text_6DcNd4",
-        "button_CHiyjX"
+        "text_6DcNd4"
       ],
       "settings": {
         "desktop_content_position": "center",
