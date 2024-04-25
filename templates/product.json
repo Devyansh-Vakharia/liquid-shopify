@@ -213,12 +213,12 @@
       "custom_css": [
         "h2 {font-weight: bold; text-shadow: 2px 2px 8px #ffffff; text-align: center;}",
         "p {font-size: 18px; text-align: center; text-shadow: 2px 2px 8px #ffffff;}",
-        ".m_video {padding-top:10px; padding-left:10px; padding-right:10px; border: 12px solid #ffffff;}",
+        ".m_video {padding-top: 10px; padding-left: 10px; padding-right: 10px; border: 12px solid #ffffff;}",
         ".vid-with-text-box {border: 1px solid #a9a9a9;}"
       ],
       "settings": {
         "revrt": false,
-        "m_revrt": false,
+        "m_revrt": true,
         "heading": "You can have anything you want in life if you dress",
         "content": "Comfort You Can Count on for Years to Come",
         "url": "",
