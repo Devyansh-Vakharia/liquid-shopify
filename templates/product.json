@@ -106,6 +106,13 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "text_eDDK69": {
+          "type": "text",
+          "settings": {
+            "text": "Maintains its quality and appearance without fading or shrinking, even after repeated washes.",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
@@ -123,7 +130,8 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "text_eDDK69"
       ],
       "settings": {
         "enable_sticky_info": true,
