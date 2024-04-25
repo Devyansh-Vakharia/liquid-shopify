@@ -213,16 +213,16 @@
       "settings": {
         "revrt": false,
         "m_revrt": false,
-        "heading": "Video With Text",
+        "heading": "You can have anything you want in life if you dress for it.",
         "content": "",
         "url": "",
         "btn_label": "",
         "select": "MP4",
-        "vid": "https:\/\/www.pexels.com\/video\/a-woman-behind-a-man-with-a-gun-8059162\/",
+        "vid": "https:\/\/videos.pexels.com\/video-files\/8059162\/8059162-hd_1920_1080_25fps.mp4",
         "check": true,
         "i_vid": "",
-        "bg_clr": false,
-        "body_text": "#cdcdcd"
+        "bg_clr": true,
+        "body_text": "#cccccc"
       }
     }
   },
