@@ -288,6 +288,7 @@
     </script>
 
     <!-- Custom CSS -->
+    {{ 'flickity.js' | asset_url | script_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
   </head>
 
@@ -359,7 +360,7 @@
     </script>
 
     {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script> 
     {%- endif -%}
 
 
