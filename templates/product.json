@@ -17,6 +17,20 @@
           "type": "text",
           "settings": {
             "text": "A promise of comfortable,best quality experience",
+            "text_style": "uppercase"
+          }
+        },
+        "text_eDDK69": {
+          "type": "text",
+          "settings": {
+            "text": "🥰 Maintains its quality and appearance without fading or shrinking, even after repeated washes.",
+            "text_style": "body"
+          }
+        },
+        "text_8nrLKH": {
+          "type": "text",
+          "settings": {
+            "text": "Our Cool Rush Technology helps to provide a refreshing and cool experience",
             "text_style": "body"
           }
         },
@@ -106,26 +120,14 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "text_eDDK69": {
-          "type": "text",
-          "settings": {
-            "text": "Maintains its quality and appearance without fading or shrinking, even after repeated washes.",
-            "text_style": "body"
-          }
-        },
-        "text_8nrLKH": {
-          "type": "text",
-          "settings": {
-            "text": "Our Cool Rush Technology helps to provide a refreshing and cool experience",
-            "text_style": "body"
-          }
         }
       },
       "block_order": [
         "judge_me_reviews_preview_badge_rKVjtH",
         "title",
         "text_wMmMgc",
+        "text_eDDK69",
+        "text_8nrLKH",
         "inventory_K9z4GY",
         "collapsible_tab_8qn8GY",
         "price",
@@ -137,9 +139,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share",
-        "text_eDDK69",
-        "text_8nrLKH"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
