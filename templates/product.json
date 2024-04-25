@@ -210,11 +210,15 @@
     },
     "video_with_text_TidyNg": {
       "type": "video_with_text",
+      "custom_css": [
+        "h2 {font-weight: bold;}",
+        ".content {}"
+      ],
       "settings": {
         "revrt": false,
         "m_revrt": false,
-        "heading": "You can have anything you want in life if you dress for it.",
-        "content": "",
+        "heading": "You can have anything you want in life if you dress",
+        "content": "Comfort You Can Count on for Years to Come",
         "url": "",
         "btn_label": "",
         "select": "MP4",
