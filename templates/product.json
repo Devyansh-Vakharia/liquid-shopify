@@ -260,7 +260,8 @@
       "custom_css": [
         ".blog-image {height: 350px; width: 280px; box-shadow: 4px 4px 0px 0px #00000040;}",
         ".blog-caption {background-color: white; padding: 20px;}",
-        ".blog-caption a {color: #000000; font-weight: bold; font-size: 25px;}"
+        ".blog-caption a {color: #000000; font-weight: bold; font-size: 25px;}",
+        ".blog-images{background:#CCCCCC;}"
       ],
       "settings": {
         "liquid-range": 6,
