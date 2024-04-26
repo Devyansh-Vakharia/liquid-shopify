@@ -237,7 +237,7 @@
     "featured_blog_drpDPy": {
       "type": "featured-blog",
       "custom_css": [
-        ".card__inner {height: 300px; width: 335px;}"
+        ".card__inner {height: 300px; width: 325px;}"
       ],
       "settings": {
         "heading": "",
