@@ -255,51 +255,11 @@
         "padding_bottom": 36
       }
     },
-    "collection_list_6nzJ8R": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_VCKJqH": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pose"
-          }
-        },
-        "featured_collection_K4ETVt": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "summer-collection-1"
-          }
-        },
-        "featured_collection_yHjCgQ": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "fashion"
-          }
-        },
-        "featured_collection_dAUNBe": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "summer-collection"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_VCKJqH",
-        "featured_collection_K4ETVt",
-        "featured_collection_yHjCgQ",
-        "featured_collection_dAUNBe"
-      ],
+    "blog_posts_A6U3TJ": {
+      "type": "blog-posts",
       "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "portrait",
-        "columns_desktop": 4,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "liquid-range": 3,
+        "new-blog": "news"
       }
     }
   },
@@ -310,6 +270,6 @@
     "related-products",
     "rich_text_Yjb8hX",
     "featured_blog_drpDPy",
-    "collection_list_6nzJ8R"
+    "blog_posts_A6U3TJ"
   ]
 }
