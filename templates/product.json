@@ -258,7 +258,7 @@
     "blog_posts_A6U3TJ": {
       "type": "blog-posts",
       "custom_css": [
-        ".blog-image {height: 350px; width: 290px; box-shadow: 4px 4px 0px 0px #00000040;}",
+        ".blog-image {height: 350px; width: 300px; box-shadow: 4px 4px 0px 0px #00000040;}",
         ".blog-caption {background-color: white; padding: 20px;}",
         ".blog-caption a {color: #000000; font-weight: bold; font-size: 25px;}",
         ".blog-images {padding-top: 80px; padding-bottom: 80px; background: #cccccc; max-width: none;}"
