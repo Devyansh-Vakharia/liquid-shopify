@@ -261,6 +261,22 @@
         "liquid-range": 3,
         "new-blog": "news"
       }
+    },
+    "1714132072f6bf1bce": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_8pUwxK": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_8pUwxK"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -270,6 +286,7 @@
     "related-products",
     "rich_text_Yjb8hX",
     "featured_blog_drpDPy",
-    "blog_posts_A6U3TJ"
+    "blog_posts_A6U3TJ",
+    "1714132072f6bf1bce"
   ]
 }
