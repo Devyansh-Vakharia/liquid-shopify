@@ -236,6 +236,9 @@
     },
     "featured_blog_drpDPy": {
       "type": "featured-blog",
+      "custom_css": [
+        ".card__inner {height: 300px; width: 300px;}"
+      ],
       "settings": {
         "heading": "",
         "heading_size": "h1",
