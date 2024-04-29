@@ -1,0 +1,298 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "judge_me_reviews_preview_badge_rKVjtH": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "text_wMmMgc": {
+          "type": "text",
+          "settings": {
+            "text": "A promise of comfortable,best quality experience",
+            "text_style": "uppercase"
+          }
+        },
+        "inventory_K9z4GY": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 12,
+            "show_inventory_quantity": true
+          }
+        },
+        "text_eDDK69": {
+          "type": "text",
+          "settings": {
+            "text": "🥰 Maintains its quality and appearance without fading or shrinking, even after repeated washes.",
+            "text_style": "body"
+          }
+        },
+        "text_8nrLKH": {
+          "type": "text",
+          "settings": {
+            "text": "❄️  Our Cool Rush Technology helps to provide a refreshing and cool experience",
+            "text_style": "body"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "check_mark",
+            "content": "<p>Shipping upto 2 days.<br\/>Return within 5 days after the delivery.<\/p><p><\/p>",
+            "page": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_rKVjtH",
+        "title",
+        "text_wMmMgc",
+        "inventory_K9z4GY",
+        "text_eDDK69",
+        "text_8nrLKH",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "collapsible-row-1",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "video_with_text_TidyNg": {
+      "type": "video_with_text",
+      "custom_css": [
+        "h2 {font-weight: bold; text-shadow: 3px 3px 8px #ffffff; text-align: center;}",
+        "p {font-size: 18px; text-align: center; text-shadow: 3px 3px 8px #ffffff;}",
+        ".m_video {padding-top: 10px; padding-left: 10px; padding-right: 10px; border: 12px solid #ffffff;}",
+        ".vid-with-text-box {border: 2px solid #a9a9a9;}"
+      ],
+      "settings": {
+        "revrt": false,
+        "m_revrt": true,
+        "heading": "You can have anything you want in life if you dress",
+        "content": "Comfort You Can Count on for Years to Come",
+        "url": "",
+        "btn_label": "",
+        "select": "MP4",
+        "vid": "https:\/\/videos.pexels.com\/video-files\/8059162\/8059162-hd_1920_1080_25fps.mp4",
+        "poster": "shopify:\/\/shop_images\/lensball-blue-and-purple-lights.jpg",
+        "check": true,
+        "i_vid": "",
+        "bg_clr": true,
+        "body_text": "#cccccc"
+      }
+    },
+    "rich_text_HVWqme": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_GRAERg": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Clothes are the spirit of fashion<\/strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_6DcNd4": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>What you wear is how you present yourself to the world, especially today, when human contacts are so quick.<\/h2>"
+          }
+        },
+        "heading_fAWnez": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Best in Comfort<\/strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_twrJ39": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Fashion is the armor to survive the reality of everyday life<\/h2>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GRAERg",
+        "text_6DcNd4",
+        "heading_fAWnez",
+        "text_twrJ39"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper {background: #cccccc; padding-top: 100px; padding-bottom: 100px;}",
+        "h2 {padding-block: 20px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_Yjb8hX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rAdr7d": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Designed by Dressmaker Experts<\/strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_RePjpk": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Embracing the comfort of the clothes<\/strong><\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rAdr7d",
+        "text_RePjpk"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_blog_drpDPy": {
+      "type": "featured-blog",
+      "custom_css": [
+        ".card__inner {height: 300px; width: 325px;}",
+        ".card__heading {text-align: center; font-size: 30px;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "blog_posts_A6U3TJ": {
+      "type": "blog-posts",
+      "custom_css": [
+        ".blog-image {height: 350px; width: 280px; box-shadow: 4px 4px 0px 0px #00000040;}",
+        ".blog-caption {background-color: white; padding: 20px;}",
+        ".blog-caption a {color: #000000; font-weight: bold; font-size: 25px;}",
+        ".blog-images {padding-top: 70px; padding-bottom: 70px; background: #cccccc;}"
+      ],
+      "settings": {
+        "liquid-range": 6,
+        "new-blog": "news"
+      }
+    },
+    "1714132072f6bf1bce": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_8pUwxK": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_8pUwxK"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "video_with_text_TidyNg",
+    "rich_text_HVWqme",
+    "related-products",
+    "rich_text_Yjb8hX",
+    "featured_blog_drpDPy",
+    "blog_posts_A6U3TJ",
+    "1714132072f6bf1bce"
+  ]
+}
