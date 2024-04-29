@@ -124,6 +124,14 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "whatsapp": {
+        "type": "whatsapp",
+        "settings": {
+          "show_whatsapp": true,
+          "whatsapp_number": "+918208630585",
+          "whatsapp_msg": "Hi! Welcome to Ribbo Fashion"
+        }
       }
     },
     "content_for_index": [
