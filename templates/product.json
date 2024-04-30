@@ -225,7 +225,7 @@
         "text_RePjpk"
       ],
       "custom_css": [
-        ".rich-text__heading{color:}"
+        ".rich-text__heading {color: #6b0097;}"
       ],
       "settings": {
         "desktop_content_position": "center",
