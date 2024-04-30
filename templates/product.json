@@ -113,8 +113,8 @@
     "video_with_text_TidyNg": {
       "type": "video_with_text",
       "custom_css": [
-        "h2 {font-weight: bold; text-shadow: 3px 3px 8px #ffffff; text-align: center;}",
-        "p {font-size: 18px; text-align: center; text-shadow: 3px 3px 8px #ffffff;}",
+        "h2 {font-weight: bold; text-shadow: 3px 3px 8px #ffffff; text-align: center; color: #6b0097;}",
+        "p {font-size: 18px; background-color: white; color: black; border-radius: 20px; }",
         ".m_video {padding-top: 10px; padding-left: 10px; padding-right: 10px; border: 12px solid #ffffff;}",
         ".vid-with-text-box {border: 2px solid #a9a9a9;}"
       ],
@@ -131,7 +131,7 @@
         "check": true,
         "i_vid": "",
         "bg_clr": true,
-        "body_text": "#cccccc"
+        "body_text": "#f0cbff"
       }
     },
     "rich_text_HVWqme": {
