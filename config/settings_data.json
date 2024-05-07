@@ -407,7 +407,8 @@
       "#ProductSubmitButton-template--17699296706783__main {background: #6b0097; color: white; font-size: 20px; font-weight: bold;}",
       ".shopify-payment-button__button {background: #6b0097; font-size: 20px; padding: 12px; font-weight: bold;}",
       "#ProductSubmitButton-template--17779619856607__main {background: #6b0097; color: white; font-size: 20px; font-weight: bold;}",
-      "#ProductSubmitButton-template--17808574513375__main{background: #6b0097; color: white; font-size: 20px; font-weight: bold;}"
+      "#ProductSubmitButton-template--17808574513375__main {background: #6b0097; color: white; font-size: 20px; font-weight: bold;}",
+      "#ProductSubmitButton-template--17808620978399__main{background: #6b0097; color: white; font-size: 20px; font-weight: bold}"
     ]
   }
 }
